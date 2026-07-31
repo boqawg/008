@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نُسك | وكالة الحج والعمرة الفاخرة</title>
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  
+  <!-- Arabic Typography: Amiri & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-cream-dark: #F3EDE2;
+      --text-dark: #232B28;
+      --pastel-pink: #EAD5CE;
+      --pastel-pink-light: #F8F1EE;
+      --gold-accent: #C5A880;
+      --border-line: #E6DCCF;
+    }
+    
+    body { 
+      background-color: var(--bg-cream); 
+      color: var(--text-dark); 
+      font-family: 'Amiri', serif;
+    }
+
+    .font-sans-custom {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Scroll Reveal Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Italian Glass Card Effects */
+    .italian-card {
+      background: rgba(250, 247, 242, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-line);
+      transition: all 0.4s ease;
+    }
+
+    .italian-card:hover {
+      border-color: var(--gold-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -10px rgba(197, 168, 128, 0.15);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-cream-dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-accent);
+      border-radius: 4px;
+    }
+  </style>
+ </head>
+
+ <body class="w-full min-h-screen antialiased selection:bg-[#EAD5CE] selection:text-[#232B28] overflow-x-hidden">
+
+  <!-- Header / Navigation -->
+  <header class="w-full border-b border-[#E6DCCF] bg-[#FAF7F2]/90 sticky top-0 z-40 backdrop-blur-md">
+   <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    
+    <a href="#" class="flex items-center gap-3">
+     <div class="w-10 h-10 rounded-full bg-[#EAD5CE]/40 border border-[#C5A880]/30 flex items-center justify-center text-[#232B28]">
+      <i data-lucide="compass" class="w-5 h-5 text-[#C5A880]"></i>
+     </div>
+     <div class="flex flex-col">
+      <span class="font-bold text-3xl tracking-wide text-[#232B28]">نُسك</span>
+      <span class="text-[10px] tracking-[0.2em] font-sans-custom uppercase text-[#C5A880] -mt-1">Italian Modern Voyages</span>
+     </div>
+    </a>
+    
+    <div class="hidden md:flex items-center gap-10 text-base font-medium text-[#232B28]/80">
+     <a class="hover:text-[#C5A880] transition-colors" href="#philosophy">فلسفتنا</a>
+     <a class="hover:text-[#C5A880] transition-colors" href="#experiences">التجارب الروحانية</a>
+     <a class="hover:text-[#C5A880] transition-colors" href="#journey">خطوات الرحلة</a>
+     <a class="hover:text-[#C5A880] transition-colors" href="#contact">التواصل</a>
+    </div>
+
+    <button type="button" onclick="openModal()" class="bg-[#232B28] text-[#FAF7F2] rounded-full px-7 py-3 text-sm font-bold tracking-wider hover:bg-[#C5A880] hover:text-[#232B28] transition-all duration-300 shadow-sm">
+     حجز رحلة خاصة
+    </button>
+   </nav>
+  </header>
+
+  <main>
+   <!-- Hero Section: Editorial Italian Layout -->
+   <section class="w-full min-h-[90vh] flex items-center border-b border-[#E6DCCF] bg-[#F3EDE2] relative overflow-hidden py-20">
+    <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:32px_32px]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+     
+     <div class="lg:col-span-7 reveal">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/40 bg-[#EAD5CE]/30 px-5 py-2 text-xs font-bold text-[#232B28] mb-8">
+       <span class="w-2 h-2 rounded-full bg-[#C5A880] animate-ping"></span> رحلات الحج والعمرة لعام 2026
+      </div>
+      
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] text-[#232B28]">
+       روحانية المَناسك.. <br>
+       <span class="italic font-bold text-[#C5A880]">بفخامة التصميم الإيطالي.</span>
+      </h1>
+      
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-[#232B28]/80">
+       نصنع لك تجربة استثنائية تفوق مجرد السفر. إقامة فاخرة، إرشاد شخصي، وعناية تامة بكل تفصيلة لتتفرّغ تماماً للعبادة والسكينة.
+      </p>
+      
+      <div class="mt-10 flex flex-wrap items-center gap-5">
+       <button type="button" onclick="openModal()" class="bg-[#232B28] text-[#FAF7F2] rounded-full px-9 py-4 text-base font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all shadow-lg">
+        استكشف الرحلات المتاحة
+       </button>
+       
+       <a href="#philosophy" class="rounded-full border border-[#232B28] bg-transparent px-8 py-4 text-base font-semibold text-[#232B28] hover:bg-[#232B28] hover:text-[#FAF7F2] transition-all">
+        كتالوج الخدمة
+       </a>
+      </div>
+     </div>
+
+     <!-- Right Column: Visual Art Structure -->
+     <div class="lg:col-span-5 reveal">
+      <div class="relative rounded-[3rem] p-4 bg-[#FAF7F2] border border-[#E6DCCF] shadow-2xl">
+       <div class="relative rounded-[2.5rem] overflow-hidden h-[520px]">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1000&auto=format&fit=crop" alt="Makkah View" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#232B28]/80 via-transparent to-transparent"></div>
+        
+        <div class="absolute bottom-8 right-8 left-8 text-[#FAF7F2] backdrop-blur-md bg-white/10 p-6 rounded-2xl border border-white/20">
+         <div class="flex items-center justify-between">
+          <div>
+           <p class="text-xs uppercase font-sans-custom tracking-widest text-[#EAD5CE]">Private Suite</p>
+           <h3 class="text-xl font-bold mt-1">إطلالة مباشرة على الحرم</h3>
+          </div>
+          <span class="w-10 h-10 rounded-full bg-[#EAD5CE] text-[#232B28] flex items-center justify-center font-bold">5★</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+
+    </div>
+   </section>
+
+   <!-- Philosophy Section (Italian Aesthetic Editorial) -->
+   <section id="philosophy" class="w-full py-28 bg-[#FAF7F2] border-b border-[#E6DCCF]">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="grid lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-5 reveal">
+       <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">فلسفة الراحة</span>
+       <h2 class="text-4xl sm:text-5xl font-normal text-[#232B28] mt-3 leading-tight">العناية بالتفاصيل هي جوهر السكينة</h2>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+       <p class="text-xl text-[#232B28]/80 leading-relaxed font-light">
+        نؤمن في "نُسك" أن الرحلة الروحانية تكتمل عندما تلتقي الرفاهية بالبساطة الإيطالية. نوفر لضيوف الرحمن مواصلات خاصة بفنادق عالمية، وجداول زكية تضمن لك أداء المناسك بأعلى درجات الراحة واليسر.
+       </p>
+      </div>
+
+     </div>
+    </div>
+   </section>
+
+   <!-- New Structure: Asymmetric Storytelling Experiences -->
+   <section id="experiences" class="w-full py-28 bg-[#F3EDE2] border-b border-[#E6DCCF]">
+    <div class="max-w-7xl mx-auto px-6">
+     
+     <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">برامجنا الحصرية</span>
+      <h2 class="text-4xl sm:text-5xl font-normal text-[#232B28] mt-2">تجارب مُصممة لراحتك</h2>
+     </div>
+
+     <!-- Alternating Layout 1 -->
+     <div class="grid lg:grid-cols-12 gap-12 items-center mb-20 reveal">
+      <div class="lg:col-span-6 order-2 lg:order-1">
+       <div class="rounded-[2.5rem] overflow-hidden border border-[#E6DCCF] h-[400px]">
+        <img src="https://images.unsplash.com/photo-1565552070094-011552593475?q=80&w=1000&auto=format&fit=crop" alt="Luxury Hotel" class="w-full h-full object-cover">
+       </div>
+      </div>
+      <div class="lg:col-span-6 order-1 lg:order-2 space-y-4">
+       <span class="text-sm font-bold text-[#C5A880] uppercase tracking-wider">01. الباقة الملكية</span>
+       <h3 class="text-3xl sm:text-4xl font-bold text-[#232B28]">عمرة الرفاهية المطلقة</h3>
+       <p class="text-base text-[#232B28]/70 leading-relaxed">إقامة في أجنحة مطلة على الكعبة المشرفة مباشرة، طيران درجة أولى، ومرافق شخصي لتسهيل كافة الإجراءات والتنقلات على مدار الساعة.</p>
+       <ul class="space-y-2 text-sm text-[#232B28]/90 pt-2">
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> سيارات سيارات خاصة للتنقل بين مكة والمدينة</li>
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> بوفيه مفتوح بإشراف طهاة عالميين</li>
+       </ul>
+       <button onclick="openModal()" class="mt-4 bg-[#232B28] text-[#FAF7F2] rounded-full px-8 py-3.5 text-sm font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all">طلب الباقة</button>
+      </div>
+     </div>
+
+     <!-- Alternating Layout 2 -->
+     <div class="grid lg:grid-cols-12 gap-12 items-center reveal">
+      <div class="lg:col-span-6 space-y-4">
+       <span class="text-sm font-bold text-[#C5A880] uppercase tracking-wider">02. البرامج العائلية</span>
+       <h3 class="text-3xl sm:text-4xl font-bold text-[#232B28]">رحلات العائلات والمجموعات</h3>
+       <p class="text-base text-[#232B28]/70 leading-relaxed">برامج مخصصة لتوفير أقصى درجات الراحة لكبار السن والأطفال، مع تنظيم جولات تاريخية وثقافية للمعالم الإسلامية في المدينة المنورة.</p>
+       <ul class="space-y-2 text-sm text-[#232B28]/90 pt-2">
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> مرشد ديني وثقافي مخصص للمجموعة</li>
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> خدمات الرعاية والعناية الخاصة</li>
+       </ul>
+       <button onclick="openModal()" class="mt-4 bg-[#232B28] text-[#FAF7F2] rounded-full px-8 py-3.5 text-sm font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all">طلب الباقة</button>
+      </div>
+      <div class="lg:col-span-6">
+       <div class="rounded-[2.5rem] overflow-hidden border border-[#E6DCCF] h-[400px]">
+        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1000&auto=format&fit=crop" alt="Madinah View" class="w-full h-full object-cover">
+       </div>
+      </div>
+     </div>
+
+    </div>
+   </section>
+
+   <!-- Modern Timeline Step Feature -->
+   <section id="journey" class="w-full py-28 bg-[#FAF7F2] border-b border-[#E6DCCF]">
+    <div class="max-w-7xl mx-auto px-6">
+     <div class="text-center max-w-xl mx-auto mb-20 reveal">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">سلاسة الإجراءات</span>
+      <h2 class="text-4xl font-normal text-[#232B28] mt-2">رحلتك معنا في 4 خطوات</h2>
+     </div>
+
+     <div class="grid md:grid-cols-4 gap-8">
+      
+      <div class="italian-card p-8 rounded-[2rem] reveal">
+       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">01</span>
+       <h4 class="text-xl font-bold text-[#232B28] mt-4">اختيار البرنامج</h4>
+       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">حدد المواعيد والباقة المناسبة لتطلعاتك واحتياجاتك الشخصية.</p>
+      </div>
+
+      <div class="italian-card p-8 rounded-[2rem] reveal">
+       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">02</span>
+       <h4 class="text-xl font-bold text-[#232B28] mt-4">إصدار التأشيرة</h4>
+       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">نقوم بجميع المعاملات الرسمية وحجوزات الطيران والفنادق بسرعة فائقة.</p>
+      </div>
+
+      <div class="italian-card p-8 rounded-[2rem] reveal">
+       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">03</span>
+       <h4 class="text-xl font-bold text-[#232B28] mt-4">الاستقبال الخاص</h4>
+       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">فريقنا الإرشادي في انتظارك في المطار فور وصولك للترحيب بك.</p>
+      </div>
+
+      <div class="italian-card p-8 rounded-[2rem] reveal">
+       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">04</span>
+       <h4 class="text-xl font-bold text-[#232B28] mt-4">أداء المناسك</h4>
+       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">أداء العبادات بكل تفرغ وراحة مع مراقبة ومتابعة دقيقة لخدمتك.</p>
+      </div>
+
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="w-full bg-[#232B28] text-[#FAF7F2] py-16">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-[#FAF7F2]/10 pb-12">
+    <div>
+     <h3 class="text-3xl font-bold">نُسك</h3>
+     <p class="text-xs text-[#EAD5CE] mt-1">وكالة الحج والعمرة الإيطالية الفاخرة</p>
+    </div>
+
+    <div class="flex items-center gap-8 text-sm text-[#FAF7F2]/80">
+     <a href="#" class="hover:text-[#C5A880]">الشروط والأحكام</a>
+     <a href="#" class="hover:text-[#C5A880]">سياسة الخصوصية</a>
+     <a href="#" class="hover:text-[#C5A880]">تواصل معنا</a>
+    </div>
+   </div>
+
+   <div class="max-w-7xl mx-auto px-6 mt-8 flex justify-between items-center text-xs text-[#FAF7F2]/50 font-sans-custom">
+    <p>© 2026 NUSUK Luxury Pilgrimage Voyages S.r.l. All rights reserved.</p>
+    <p>Milano • Jeddah • Makkah</p>
+   </div>
+  </footer>
+
+  <!-- Booking Modal Component -->
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-[#232B28]/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+   <div class="bg-[#FAF7F2] w-full max-w-lg rounded-[2.5rem] border border-[#E6DCCF] p-8 relative shadow-2xl">
+    <button onclick="closeModal()" class="absolute top-6 left-6 text-gray-400 hover:text-[#232B28]">✕</button>
+    
+    <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">حجز مخصص</span>
+    <h3 class="text-2xl font-bold text-[#232B28] mt-1">تصميم رحلتك الروحانية</h3>
+    
+    <form class="mt-6 space-y-4 text-sm" onsubmit="event.preventDefault(); alert('تم استلام طلبكم بنجاح، سيتواصل معكم مستشارنا الروحاني خلال 24 ساعة.'); closeModal();">
+     <div>
+      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">الاسم الكامل</label>
+      <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
+     </div>
+
+     <div>
+      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">رقم الهاتف / الواتساب</label>
+      <input type="tel" required placeholder="+966 50 000 0000" class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
+     </div>
+
+     <div>
+      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">نوع الرحلة</label>
+      <select class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
+       <option>عمرة الفخامة الملكية</option>
+       <option>برنامج العائلات</option>
+       <option>رحلة الحج VIP</option>
+      </select>
+     </div>
+
+     <button type="submit" class="w-full bg-[#232B28] text-[#FAF7F2] font-bold py-4 rounded-xl text-sm hover:bg-[#C5A880] hover:text-[#232B28] transition-all mt-4">
+      إرسال طلب الاستشارة
+     </button>
+    </form>
+   </div>
+  </div>
+
+  <!-- Smooth Scroll Reveal Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+
+      // Scroll Reveal Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+
+    // Modal Control
+    const modal = document.getElementById("bookingModal");
+    function openModal() {
+      modal.classList.remove("opacity-0", "pointer-events-none");
+    }
+    function closeModal() {
+      modal.classList.add("opacity-0", "pointer-events-none");
+    }
+  </script>
+ </body>
+</html>
