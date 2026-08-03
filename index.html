@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" id="htmlTag">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atelier d'Arte — Creative & Artisan Workshops for Kids & Adults</title>
+  <title>Atelier d'Arte — Creative & Artisan Workshops</title>
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   
-  <!-- Italian Typography -->
+  <!-- Italian & Arabic Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Alexandria:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -29,11 +29,11 @@
     body { 
       background-color: var(--bg-cream); 
       color: var(--text-dark); 
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Alexandria', sans-serif;
     }
 
     .font-serif-italiano {
-      font-family: 'Bodoni Moda', serif;
+      font-family: 'Bodoni Moda', 'Alexandria', serif;
     }
 
     /* Scroll Reveal Motion */
@@ -50,7 +50,7 @@
     /* Italian Pastel Glass Card with Soft Glow Effect */
     .pastel-card {
       position: relative;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(16px);
       border: 1px solid var(--border-line);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -107,27 +107,35 @@
       <span class="font-serif-italiano italic font-bold text-xl text-[#232220]">A</span>
      </div>
      <div class="flex flex-col">
-      <span class="font-serif-italiano font-bold text-xl tracking-tight text-[#232220]">Atelier d'Arte</span>
-      <span class="text-[9px] tracking-[0.25em] font-medium uppercase text-[#9B829C] -mt-1">Djendel & Khemis Miliana</span>
+      <span class="font-serif-italiano font-bold text-xl tracking-tight text-[#232220]" id="navTitle">Atelier d'Arte</span>
+      <span class="text-[9px] tracking-[0.2em] font-medium uppercase text-[#9B829C] -mt-1" id="navSubtitle">Djendel & Khemis Miliana</span>
      </div>
     </a>
     
-    <div class="hidden md:flex items-center gap-10 text-xs font-semibold uppercase tracking-widest text-[#232220]/70">
-     <a class="hover:text-[#9B829C] transition-colors" href="#about">About Atelier</a>
-     <a class="hover:text-[#9B829C] transition-colors" href="#workshops">Workshops</a>
-     <a class="hover:text-[#9B829C] transition-colors" href="#locations">Locations</a>
-     <a class="hover:text-[#9B829C] transition-colors" href="#booking">Book Workshop</a>
+    <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-[#232220]/70">
+     <a class="hover:text-[#9B829C] transition-colors" href="#about" id="navAbout">About Atelier</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#workshops" id="navWorkshops">Workshops</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#locations" id="navLocations">Locations</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#booking" id="navBooking">Book Workshop</a>
     </div>
 
-    <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-7 py-3 text-xs font-bold tracking-widest uppercase hover:bg-[#E8E0F5] hover:text-[#232220] transition-all duration-300 shadow-sm">
-     Book a Seat
-    </a>
+    <div class="flex items-center gap-4">
+     <!-- Language Toggle Button -->
+     <button onclick="toggleLanguage()" class="border border-[#E8E1D7] bg-white/80 rounded-full px-4 py-2 text-xs font-bold text-[#232220] hover:bg-[#FAF1D6] transition-all flex items-center gap-1.5 shadow-sm">
+      <i data-lucide="globe" class="w-3.5 h-3.5 text-[#9B829C]"></i>
+      <span id="langBtnText">العربية</span>
+     </button>
+
+     <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-6 py-2.5 text-xs font-bold tracking-widest uppercase hover:bg-[#E8E0F5] hover:text-[#232220] transition-all duration-300 shadow-sm" id="navCTA">
+      Book a Seat
+     </a>
+    </div>
    </nav>
   </header>
 
   <main>
    <!-- Hero Section with Custom Background Image Support -->
-   <section id="about" class="w-full min-h-[90vh] flex items-center border-b border-[#E8E1D7] relative overflow-hidden py-24 bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.85) 0%, rgba(248, 225, 231, 0.4) 100%), url('YOUR_IMAGE_URL');">
+   <section id="about" class="w-full min-h-[90vh] flex items-center border-b border-[#E8E1D7] relative overflow-hidden py-24 bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.85) 0%, rgba(248, 225, 231, 0.45) 100%), url('YOUR_IMAGE_URL');">
     
     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#E8E0F5_1.5px,transparent_1.5px)] [background-size:32px_32px]"></div>
 
@@ -135,24 +143,24 @@
      
      <div class="lg:col-span-8 reveal">
       <div class="inline-flex items-center gap-2 rounded-full border border-[#E8E1D7] bg-[#D8EBF8]/60 px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#232220] mb-8">
-       <span class="w-2 h-2 rounded-full bg-[#9B829C] animate-pulse"></span> Workshops for Kids & Adults
+       <span class="w-2 h-2 rounded-full bg-[#9B829C] animate-pulse"></span> <span id="heroBadge">Workshops for Kids & Adults</span>
       </div>
       
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] text-[#232220] font-serif-italiano">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] text-[#232220] font-serif-italiano" id="heroTitle">
        Unleash Creativity & <br>
        <span class="italic font-normal text-[#9B829C]">Artisan Craftsmanship.</span>
       </h1>
       
-      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-[#232220]/80 font-light">
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-[#232220]/80 font-light" id="heroDesc">
        Welcome to <strong class="font-semibold text-[#232220]">Atelier d'Arte</strong>. An Italian-inspired creative sanctuary located in <strong class="font-semibold text-[#232220]">Djendel</strong> and <strong class="font-semibold text-[#232220]">Khemis Miliana</strong>. We offer hands-on fine art, pottery, sewing, and craftsmanship workshops designed to inspire both kids and adults.
       </p>
       
       <div class="mt-10 flex flex-wrap items-center gap-5">
-       <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-9 py-4 text-xs font-bold tracking-widest uppercase hover:bg-[#F8E1E7] hover:text-[#232220] transition-all shadow-lg">
+       <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-9 py-4 text-xs font-bold tracking-widest uppercase hover:bg-[#F8E1E7] hover:text-[#232220] transition-all shadow-lg" id="heroBtn1">
         Book Your Workshop Now
        </a>
        
-       <a href="#workshops" class="rounded-full border border-[#232220] bg-transparent px-8 py-4 text-xs font-bold tracking-widest uppercase text-[#232220] hover:bg-[#232220] hover:text-[#FAF8F5] transition-all">
+       <a href="#workshops" class="rounded-full border border-[#232220] bg-transparent px-8 py-4 text-xs font-bold tracking-widest uppercase text-[#232220] hover:bg-[#232220] hover:text-[#FAF8F5] transition-all" id="heroBtn2">
         Explore All Programs
        </a>
       </div>
@@ -162,29 +170,29 @@
      <div class="lg:col-span-4 reveal">
       <div class="pastel-card p-8 rounded-[2.5rem] bg-gradient-to-br from-[#F8E1E7]/70 via-[#E8E0F5]/50 to-[#D8EBF8]/70">
        <div class="relative z-10">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Atelier Locations</span>
-        <h3 class="font-serif-italiano text-3xl font-normal text-[#232220] mt-3 leading-snug">Two Venues for Your Artistic Journey</h3>
+        <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="sideCardBadge">Atelier Locations</span>
+        <h3 class="font-serif-italiano text-3xl font-normal text-[#232220] mt-3 leading-snug" id="sideCardTitle">Two Venues for Your Artistic Journey</h3>
         
         <div class="mt-6 space-y-4">
          <div class="flex items-start gap-3 bg-white/70 p-4 rounded-2xl border border-[#E8E1D7]">
           <i data-lucide="map-pin" class="w-5 h-5 text-[#9B829C] shrink-0 mt-0.5"></i>
           <div>
-           <h4 class="font-bold text-sm text-[#232220]">Djendel Center</h4>
-           <p class="text-xs text-[#232220]/70 mt-0.5">Kids & Teen Creative Studio</p>
+           <h4 class="font-bold text-sm text-[#232220]" id="loc1Title">Djendel Center</h4>
+           <p class="text-xs text-[#232220]/70 mt-0.5" id="loc1Desc">Kids & Teen Creative Studio</p>
           </div>
          </div>
 
          <div class="flex items-start gap-3 bg-white/70 p-4 rounded-2xl border border-[#E8E1D7]">
           <i data-lucide="map-pin" class="w-5 h-5 text-[#9B829C] shrink-0 mt-0.5"></i>
           <div>
-           <h4 class="font-bold text-sm text-[#232220]">Khemis Miliana Hub</h4>
-           <p class="text-xs text-[#232220]/70 mt-0.5">Adult Fine Art & Crafts Studio</p>
+           <h4 class="font-bold text-sm text-[#232220]" id="loc2Title">Khemis Miliana Hub</h4>
+           <p class="text-xs text-[#232220]/70 mt-0.5" id="loc2Desc">Adult Fine Art & Crafts Studio</p>
           </div>
          </div>
         </div>
 
         <div class="mt-8 pt-6 border-t border-[#E8E1D7] flex items-center justify-between">
-         <span class="text-xs font-bold uppercase tracking-wider text-[#232220]/70">Weekly Sessions Available</span>
+         <span class="text-xs font-bold uppercase tracking-wider text-[#232220]/70" id="sideCardFooter">Weekly Sessions Available</span>
          <i data-lucide="palette" class="w-5 h-5 text-[#9B829C]"></i>
         </div>
        </div>
@@ -199,9 +207,9 @@
     <div class="max-w-7xl mx-auto px-6">
      
      <div class="text-center max-w-2xl mx-auto mb-20 reveal">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Curated Experiences</span>
-      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Artistic & Crafts Workshops</h2>
-      <p class="text-sm text-[#232220]/70 mt-4">Select a workshop suitable for your age group and interest level.</p>
+      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="workshopsBadge">Curated Experiences</span>
+      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2" id="workshopsTitle">Artistic & Crafts Workshops</h2>
+      <p class="text-sm text-[#232220]/70 mt-4" id="workshopsSub">Select a workshop suitable for your age group and interest level.</p>
      </div>
 
      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -212,13 +220,13 @@
         <div class="w-12 h-12 rounded-2xl bg-[#F8E1E7] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
          <i data-lucide="shapes" class="w-6 h-6"></i>
         </div>
-        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF1D6] text-[#232220] mb-3">Kids & Adults</span>
-        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Ceramics & Pottery</h3>
-        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Learn hand-building, clay molding, sculpting, and wheel throwing with organic glazes.</p>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF1D6] text-[#232220] mb-3" id="ws1Tag">Kids & Adults</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws1Title">Ceramics & Pottery</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws1Desc">Learn hand-building, clay molding, sculpting, and wheel throwing with organic glazes.</p>
        </div>
        
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
-        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="text-xs font-bold text-[#232220]/60" id="wsStart1">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,500 DZD</span>
        </div>
       </div>
@@ -229,13 +237,13 @@
         <div class="w-12 h-12 rounded-2xl bg-[#D8EBF8] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
          <i data-lucide="brush" class="w-6 h-6"></i>
         </div>
-        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F8E1E7] text-[#232220] mb-3">Kids Special</span>
-        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Acrylic & Canvas</h3>
-        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Color mixing, brush techniques, and expressive painting inspired by modern Italian art.</p>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F8E1E7] text-[#232220] mb-3" id="ws2Tag">Kids Special</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws2Title">Acrylic & Canvas</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws2Desc">Color mixing, brush techniques, and expressive painting inspired by modern Italian art.</p>
        </div>
        
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
-        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="text-xs font-bold text-[#232220]/60" id="wsStart2">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">1,800 DZD</span>
        </div>
       </div>
@@ -246,13 +254,13 @@
         <div class="w-12 h-12 rounded-2xl bg-[#E8E0F5] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
          <i data-lucide="scissors" class="w-6 h-6"></i>
         </div>
-        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#DDEFE6] text-[#232220] mb-3">Adults Masterclass</span>
-        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Sewing & Embroidery</h3>
-        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Garment patterns, hand embroidery, fabric cutting, and decorative artisan stitchery.</p>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#DDEFE6] text-[#232220] mb-3" id="ws3Tag">Adults Masterclass</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws3Title">Sewing & Embroidery</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws3Desc">Garment patterns, hand embroidery, fabric cutting, and decorative artisan stitchery.</p>
        </div>
        
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
-        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="text-xs font-bold text-[#232220]/60" id="wsStart3">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">3,200 DZD</span>
        </div>
       </div>
@@ -263,13 +271,13 @@
         <div class="w-12 h-12 rounded-2xl bg-[#FAF1D6] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
          <i data-lucide="sparkles" class="w-6 h-6"></i>
         </div>
-        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#D8EBF8] text-[#232220] mb-3">All Ages</span>
-        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Resin Art & Crafts</h3>
-        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Creating custom resin coasters, jewelry, botanical frames, and paper origami architecture.</p>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#D8EBF8] text-[#232220] mb-3" id="ws4Tag">All Ages</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws4Title">Resin Art & Crafts</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws4Desc">Creating custom resin coasters, jewelry, botanical frames, and paper origami architecture.</p>
        </div>
        
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
-        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="text-xs font-bold text-[#232220]/60" id="wsStart4">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,800 DZD</span>
        </div>
       </div>
@@ -284,23 +292,23 @@
      <div class="grid lg:grid-cols-2 gap-12 items-center">
       
       <div class="reveal">
-       <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Our Dual Studios</span>
-       <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Djendel & Khemis Miliana</h2>
-       <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed">
+       <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="locSectionBadge">Our Dual Studios</span>
+       <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2" id="locSectionTitle">Djendel & Khemis Miliana</h2>
+       <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed" id="locSectionDesc">
         Our studios are equipped with professional artistic materials, safe tools for children, and peaceful Italian background music to create an inspirational environment.
        </p>
 
        <div class="mt-8 grid sm:grid-cols-2 gap-6">
         <div class="pastel-card p-6 rounded-2xl bg-[#F8E1E7]/30">
-         <div class="font-serif-italiano text-xl font-bold text-[#232220]">Djendel Studio</div>
-         <p class="text-xs text-[#232220]/70 mt-2">Rue Principal, Near Center Community Hub.</p>
-         <div class="mt-4 text-xs font-bold text-[#9B829C]">Sat — Wed: 09:00 - 17:00</div>
+         <div class="font-serif-italiano text-xl font-bold text-[#232220]" id="locCard1Title">Djendel Studio</div>
+         <p class="text-xs text-[#232220]/70 mt-2" id="locCard1Desc">Rue Principal, Near Center Community Hub.</p>
+         <div class="mt-4 text-xs font-bold text-[#9B829C]" id="locCard1Time">Sat — Wed: 09:00 - 17:00</div>
         </div>
 
         <div class="pastel-card p-6 rounded-2xl bg-[#D8EBF8]/30">
-         <div class="font-serif-italiano text-xl font-bold text-[#232220]">Khemis Miliana Studio</div>
-         <p class="text-xs text-[#232220]/70 mt-2">Avenue de l'Université, Opposite Arts Center.</p>
-         <div class="mt-4 text-xs font-bold text-[#9B829C]">Thu — Sat: 10:00 - 19:00</div>
+         <div class="font-serif-italiano text-xl font-bold text-[#232220]" id="locCard2Title">Khemis Miliana Studio</div>
+         <p class="text-xs text-[#232220]/70 mt-2" id="locCard2Desc">Avenue de l'Université, Opposite Arts Center.</p>
+         <div class="mt-4 text-xs font-bold text-[#9B829C]" id="locCard2Time">Thu — Sat: 10:00 - 19:00</div>
         </div>
        </div>
       </div>
@@ -311,8 +319,8 @@
         <div class="w-20 h-20 mx-auto rounded-full bg-white/80 border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6 shadow-sm">
          <i data-lucide="palette" class="w-10 h-10 text-[#9B829C]"></i>
         </div>
-        <h3 class="font-serif-italiano text-3xl font-bold text-[#232220]">"Art is freedom in harmony."</h3>
-        <p class="text-xs text-[#232220]/70 mt-4 max-w-sm mx-auto">All workshop fees include raw materials, protective aprons, guided instruction, and your finished handmade creation to keep.</p>
+        <h3 class="font-serif-italiano text-3xl font-bold text-[#232220]" id="quoteTitle">"Art is freedom in harmony."</h3>
+        <p class="text-xs text-[#232220]/70 mt-4 max-w-sm mx-auto" id="quoteDesc">All workshop fees include raw materials, protective aprons, guided instruction, and your finished handmade creation to keep.</p>
        </div>
       </div>
 
@@ -325,24 +333,24 @@
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
      
      <div class="lg:col-span-5 reveal">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Reservation & Ticket</span>
-      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Book Your Workshop Seat</h2>
-      <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="bookBadge">Reservation & Ticket</span>
+      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2" id="bookTitle">Book Your Workshop Seat</h2>
+      <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed" id="bookDesc">
        Select your preferred location, target age group, workshop category, and time slot. Prices update dynamically based on your selection.
       </p>
 
       <div class="mt-8 space-y-4 text-xs">
        <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-full bg-[#FAF1D6] flex items-center justify-center text-[#232220] font-bold">✓</div>
-        <span>All raw materials and tools included in fee.</span>
+        <span id="feat1">All raw materials and tools included in fee.</span>
        </div>
        <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-full bg-[#DDEFE6] flex items-center justify-center text-[#232220] font-bold">✓</div>
-        <span>Take home your handcrafted artwork.</span>
+        <span id="feat2">Take home your handcrafted artwork.</span>
        </div>
        <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-full bg-[#F8E1E7] flex items-center justify-center text-[#232220] font-bold">✓</div>
-        <span>Certified artisan instruction & guidance.</span>
+        <span id="feat3">Certified artisan instruction & guidance.</span>
        </div>
       </div>
      </div>
@@ -351,18 +359,18 @@
      <div class="lg:col-span-7 reveal">
       <div class="pastel-card p-10 rounded-[2.5rem] bg-white/90">
        <div class="relative z-10">
-        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220] mb-6">Workshop Reservation Form</h3>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220] mb-6" id="formHeader">Workshop Reservation Form</h3>
         
-        <form id="bookingForm" class="space-y-4 text-xs" onsubmit="event.preventDefault(); alert('Grazie! Your workshop seat has been reserved successfully.');">
+        <form id="bookingForm" class="space-y-4 text-xs" onsubmit="event.preventDefault(); handleBookingSubmit();">
          
          <div class="grid md:grid-cols-2 gap-4">
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Full Name</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblNa">Full Name</label>
            <input type="text" required placeholder="e.g. Sofia Rahil" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
           </div>
 
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Phone / WhatsApp</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblPh">Phone / WhatsApp</label>
            <input type="tel" required placeholder="+213 500 000 000" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
           </div>
          </div>
@@ -370,57 +378,57 @@
          <div class="grid md:grid-cols-2 gap-4">
           <!-- Location Selection -->
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Studio Location</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblLoc">Studio Location</label>
            <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
-            <option value="">Select location...</option>
-            <option value="djendel">Djendel Atelier Studio</option>
-            <option value="khemis">Khemis Miliana Atelier Studio</option>
+            <option value="" id="optLocSelect">Select location...</option>
+            <option value="djendel" id="optLocDjendel">Djendel Atelier Studio</option>
+            <option value="khemis" id="optLocKhemis">Khemis Miliana Atelier Studio</option>
            </select>
           </div>
 
           <!-- Participant Category -->
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Participant Category</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblCat">Participant Category</label>
            <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
-            <option value="kids">Kids (Ages 5 - 14)</option>
-            <option value="adults">Adults & Teens (15+)</option>
+            <option value="kids" id="optCatKids">Kids (Ages 5 - 14)</option>
+            <option value="adults" id="optCatAdults">Adults & Teens (15+)</option>
            </select>
           </div>
          </div>
 
          <!-- Workshop Selection with Dynamic Price -->
          <div>
-          <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Select Workshop & Price</label>
+          <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblWs">Select Workshop & Price</label>
           <select id="workshopSelect" required onchange="updatePrice()" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all font-semibold">
-           <option value="2500">Ceramics & Clay Pottery — 2,500 DZD</option>
-           <option value="1800">Acrylic Painting & Canvas — 1,800 DZD</option>
-           <option value="3200">Textiles, Sewing & Patterns — 3,200 DZD</option>
-           <option value="2800">Resin Art & Handcrafts — 2,800 DZD</option>
+           <option value="2500" id="optWs1">Ceramics & Clay Pottery — 2,500 DZD</option>
+           <option value="1800" id="optWs2">Acrylic Painting & Canvas — 1,800 DZD</option>
+           <option value="3200" id="optWs3">Textiles, Sewing & Patterns — 3,200 DZD</option>
+           <option value="2800" id="optWs4">Resin Art & Handcrafts — 2,800 DZD</option>
           </select>
          </div>
 
          <div class="grid md:grid-cols-2 gap-4">
           <!-- Preferred Timing Slot -->
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Suitable Time Slot</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblTime">Suitable Time Slot</label>
            <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
-            <option value="morning">Morning Session (10:00 AM – 12:30 PM)</option>
-            <option value="afternoon">Afternoon Session (14:00 PM – 16:30 PM)</option>
-            <option value="weekend">Weekend Special (15:00 PM – 18:00 PM)</option>
+            <option value="morning" id="optTime1">Morning Session (10:00 AM – 12:30 PM)</option>
+            <option value="afternoon" id="optTime2">Afternoon Session (14:00 PM – 16:30 PM)</option>
+            <option value="weekend" id="optTime3">Weekend Special (15:00 PM – 18:00 PM)</option>
            </select>
           </div>
 
           <!-- Total Calculated Price Display -->
           <div>
-           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Total Fee</label>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblTotal">Total Fee</label>
            <div class="w-full bg-[#FAF1D6]/60 border border-[#E8E1D7] rounded-xl px-5 py-3 text-[#232220] font-serif-italiano font-bold text-lg flex items-center justify-between">
-            <span>Price:</span>
+            <span id="lblPriceText">Price:</span>
             <span id="priceDisplay" class="text-[#232220]">2,500 DZD</span>
            </div>
           </div>
          </div>
 
-         <button type="submit" class="w-full bg-[#232220] text-[#FAF8F5] font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-[#F8E1E7] hover:text-[#232220] transition-all mt-4 shadow-md">
+         <button type="submit" id="btnSubmitForm" class="w-full bg-[#232220] text-[#FAF8F5] font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-[#F8E1E7] hover:text-[#232220] transition-all mt-4 shadow-md">
           Confirm Reservation
          </button>
         </form>
@@ -432,35 +440,247 @@
    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer with Social Icons (Facebook, Instagram, TikTok Only) -->
   <footer class="w-full bg-[#232220] text-[#FAF8F5] py-16 border-t border-[#FAF8F5]/10">
    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-[#FAF8F5]/10 pb-12">
+    
     <div>
      <h3 class="font-serif-italiano text-3xl font-normal">Atelier d'Arte</h3>
-     <p class="text-xs text-[#E8E0F5] mt-1 tracking-widest uppercase">Artistic & Crafts Workshops — Djendel & Khemis Miliana</p>
+     <p class="text-xs text-[#E8E0F5] mt-1 tracking-widest uppercase" id="ftSub">Artistic & Crafts Workshops — Djendel & Khemis Miliana</p>
     </div>
 
-    <div class="flex items-center gap-8 text-xs uppercase tracking-widest text-[#FAF8F5]/70">
-     <a href="#about" class="hover:text-[#F8E1E7] transition-colors">About</a>
-     <a href="#workshops" class="hover:text-[#F8E1E7] transition-colors">Workshops</a>
-     <a href="#locations" class="hover:text-[#F8E1E7] transition-colors">Locations</a>
-     <a href="#booking" class="hover:text-[#F8E1E7] transition-colors">Booking</a>
+    <!-- Social Media Links (Facebook, Instagram, TikTok ONLY) -->
+    <div class="flex items-center gap-4">
+     <!-- Facebook -->
+     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#D8EBF8] hover:text-[#232220] hover:border-[#D8EBF8] transition-all" title="Facebook">
+      <i data-lucide="facebook" class="w-5 h-5"></i>
+     </a>
+
+     <!-- Instagram -->
+     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#F8E1E7] hover:text-[#232220] hover:border-[#F8E1E7] transition-all" title="Instagram">
+      <i data-lucide="instagram" class="w-5 h-5"></i>
+     </a>
+
+     <!-- TikTok -->
+     <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#FAF1D6] hover:text-[#232220] hover:border-[#FAF1D6] transition-all" title="TikTok">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+       <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.42V8.99a6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 10.8 4.49A6.31 6.31 0 0 0 15.82 15V8.2a8.28 8.28 0 0 0 4.77 1.51V6.3a4.85 4.85 0 0 1-1-.01z"/>
+      </svg>
+     </a>
     </div>
+
    </div>
 
    <div class="max-w-7xl mx-auto px-6 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-[#FAF8F5]/40 gap-4">
     <p>© 2026 Atelier d'Arte. All rights reserved.</p>
-    <p class="uppercase tracking-widest">Italian Aesthetic & Pastel Elegance</p>
+    <p class="uppercase tracking-widest" id="ftRights">Italian Aesthetic & Pastel Elegance</p>
    </div>
   </footer>
 
-  <!-- Scripts for Animations, Glow Effects, and Dynamic Pricing -->
+  <!-- Translation Dictionary & Dynamic Scripts -->
   <script>
+    let currentLang = 'en';
+
+    const translations = {
+      en: {
+        navTitle: "Atelier d'Arte",
+        navSubtitle: "Djendel & Khemis Miliana",
+        navAbout: "About Atelier",
+        navWorkshops: "Workshops",
+        navLocations: "Locations",
+        navBooking: "Book Workshop",
+        navCTA: "Book a Seat",
+        langBtnText: "العربية",
+        heroBadge: "Workshops for Kids & Adults",
+        heroTitle: "Unleash Creativity & <br><span class='italic font-normal text-[#9B829C]'>Artisan Craftsmanship.</span>",
+        heroDesc: "Welcome to <strong class='font-semibold text-[#232220]'>Atelier d'Arte</strong>. An Italian-inspired creative sanctuary located in <strong class='font-semibold text-[#232220]'>Djendel</strong> and <strong class='font-semibold text-[#232220]'>Khemis Miliana</strong>. We offer hands-on fine art, pottery, sewing, and craftsmanship workshops designed to inspire both kids and adults.",
+        heroBtn1: "Book Your Workshop Now",
+        heroBtn2: "Explore All Programs",
+        sideCardBadge: "Atelier Locations",
+        sideCardTitle: "Two Venues for Your Artistic Journey",
+        loc1Title: "Djendel Center",
+        loc1Desc: "Kids & Teen Creative Studio",
+        loc2Title: "Khemis Miliana Hub",
+        loc2Desc: "Adult Fine Art & Crafts Studio",
+        sideCardFooter: "Weekly Sessions Available",
+        workshopsBadge: "Curated Experiences",
+        workshopsTitle: "Artistic & Crafts Workshops",
+        workshopsSub: "Select a workshop suitable for your age group and interest level.",
+        ws1Tag: "Kids & Adults",
+        ws1Title: "Ceramics & Pottery",
+        ws1Desc: "Learn hand-building, clay molding, sculpting, and wheel throwing with organic glazes.",
+        wsStart1: "Starting from",
+        ws2Tag: "Kids Special",
+        ws2Title: "Acrylic & Canvas",
+        ws2Desc: "Color mixing, brush techniques, and expressive painting inspired by modern Italian art.",
+        wsStart2: "Starting from",
+        ws3Tag: "Adults Masterclass",
+        ws3Title: "Sewing & Embroidery",
+        ws3Desc: "Garment patterns, hand embroidery, fabric cutting, and decorative artisan stitchery.",
+        wsStart3: "Starting from",
+        ws4Tag: "All Ages",
+        ws4Title: "Resin Art & Crafts",
+        ws4Desc: "Creating custom resin coasters, jewelry, botanical frames, and paper origami architecture.",
+        wsStart4: "Starting from",
+        locSectionBadge: "Our Dual Studios",
+        locSectionTitle: "Djendel & Khemis Miliana",
+        locSectionDesc: "Our studios are equipped with professional artistic materials, safe tools for children, and peaceful Italian background music to create an inspirational environment.",
+        locCard1Title: "Djendel Studio",
+        locCard1Desc: "Rue Principal, Near Center Community Hub.",
+        locCard1Time: "Sat — Wed: 09:00 - 17:00",
+        locCard2Title: "Khemis Miliana Studio",
+        locCard2Desc: "Avenue de l'Université, Opposite Arts Center.",
+        locCard2Time: "Thu — Sat: 10:00 - 19:00",
+        quoteTitle: '"Art is freedom in harmony."',
+        quoteDesc: "All workshop fees include raw materials, protective aprons, guided instruction, and your finished handmade creation to keep.",
+        bookBadge: "Reservation & Ticket",
+        bookTitle: "Book Your Workshop Seat",
+        bookDesc: "Select your preferred location, target age group, workshop category, and time slot. Prices update dynamically based on your selection.",
+        feat1: "All raw materials and tools included in fee.",
+        feat2: "Take home your handcrafted artwork.",
+        feat3: "Certified artisan instruction & guidance.",
+        formHeader: "Workshop Reservation Form",
+        lblNa: "Full Name",
+        lblPh: "Phone / WhatsApp",
+        lblLoc: "Studio Location",
+        optLocSelect: "Select location...",
+        optLocDjendel: "Djendel Atelier Studio",
+        optLocKhemis: "Khemis Miliana Atelier Studio",
+        lblCat: "Participant Category",
+        optCatKids: "Kids (Ages 5 - 14)",
+        optCatAdults: "Adults & Teens (15+)",
+        lblWs: "Select Workshop & Price",
+        optWs1: "Ceramics & Clay Pottery — 2,500 DZD",
+        optWs2: "Acrylic Painting & Canvas — 1,800 DZD",
+        optWs3: "Textiles, Sewing & Patterns — 3,200 DZD",
+        optWs4: "Resin Art & Handcrafts — 2,800 DZD",
+        lblTime: "Suitable Time Slot",
+        optTime1: "Morning Session (10:00 AM – 12:30 PM)",
+        optTime2: "Afternoon Session (14:00 PM – 16:30 PM)",
+        optTime3: "Weekend Special (15:00 PM – 18:00 PM)",
+        lblTotal: "Total Fee",
+        lblPriceText: "Price:",
+        btnSubmitForm: "Confirm Reservation",
+        ftSub: "Artistic & Crafts Workshops — Djendel & Khemis Miliana",
+        ftRights: "Italian Aesthetic & Pastel Elegance",
+        alertMsg: "Grazie! Your workshop seat has been reserved successfully."
+      },
+      ar: {
+        navTitle: "أتيليه دآرتي",
+        navSubtitle: "جندل وخميس مليانة",
+        navAbout: "عن الورشة",
+        navWorkshops: "الورشات",
+        navLocations: "الفروع",
+        navBooking: "حجز ورشة",
+        navCTA: "احجز مقعدك",
+        langBtnText: "English",
+        heroBadge: "ورشات فنية للأطفال والكبار",
+        heroTitle: "أطلقي عنان الإبداع و <br><span class='italic font-normal text-[#9B829C]'>الحرفية الفنية الراقية.</span>",
+        heroDesc: "مرحباً بكم في <strong class='font-semibold text-[#232220]'>أتيليه دآرتي (Atelier d'Arte)</strong>. مساحتكم الإبداعية المصممة بلمسة إيطالية والموجودة في <strong class='font-semibold text-[#232220]'>جندل</strong> و <strong class='font-semibold text-[#232220]'>خميس مليانة</strong>. نقدم ورشات تطبيقية في الفنون الجميلة، الفخار، الخياطة والحرف اليدوية للأطفال والكبار.",
+        heroBtn1: "احجزي ورشتكِ الآن",
+        heroBtn2: "استكشفي جميع الورشات",
+        sideCardBadge: "مقرات الأتيليه",
+        sideCardTitle: "استوديوهان لرحلتكِ الفنية الإبداعية",
+        loc1Title: "مقر جندل",
+        loc1Desc: "استوديو إبداعي مخصص للأطفال والناشئة",
+        loc2Title: "مقر خميس مليانة",
+        loc2Desc: "استوديو الفنون الجميلة والحرف للكبار",
+        sideCardFooter: "حصص أسبوعية متوفرة",
+        workshopsBadge: "تجارب متميزة",
+        workshopsTitle: "ورشات الفنون والحرف اليدوية",
+        workshopsSub: "اختاري الورشة المناسبة لفئتكِ العمرية واهتماماتكِ.",
+        ws1Tag: "أطفال وكبار",
+        ws1Title: "الفخار والسيراميك",
+        ws1Desc: "تعلم تشكيل الطين اليدوي، النحت، والنحت على العجلة مع التلوين الزجاجي.",
+        wsStart1: "يبدأ من",
+        ws2Tag: "خاص بالأطفال",
+        ws2Title: "الرسم والأكريليك",
+        ws2Desc: "مزج الألوان، تقنيات الفرشاة، والرسم التعبيري بأسلوب الفن الإيطالي الحديث.",
+        wsStart2: "يبدأ من",
+        ws3Tag: "ماستركلاس الكبار",
+        ws3Title: "الخياطة والتطريز",
+        ws3Desc: "باترونات الملابس، التطريز اليدوي، قص الأقمشة والغرز الدقيقة.",
+        wsStart3: "يبدأ من",
+        ws4Tag: "جميع الأعمار",
+        ws4Title: "فن الريزين والحرف",
+        ws4Desc: "صناعة قواعد الأكواب، المجوهرات، الإطارات النباتية وأشكال الأوريغامي.",
+        wsStart4: "يبدأ من",
+        locSectionBadge: "استوديوهاتنا المتنوعة",
+        locSectionTitle: "جندل وخميس مليانة",
+        locSectionDesc: "استوديوهاتنا مجهزة بأفضل الأدوات الفنية والأجهزة الآمنة للأطفال مع موسيقى خلفية إيطالية هادئة لتهيئة جو إبداعي راقٍ.",
+        locCard1Title: "استوديو جندل",
+        locCard1Desc: "الشارع الرئيسي، بالقرب من المركز الثقافي.",
+        locCard1Time: "السبت — الأربعاء: 09:00 - 17:00",
+        locCard2Title: "استوديو خميس مليانة",
+        locCard2Desc: "شارع الجامعة، مقابل مركز الفنون.",
+        locCard2Time: "الخميس — السبت: 10:00 - 19:00",
+        quoteTitle: '"الفن هو الحرية في تناغم تام."',
+        quoteDesc: "جميع رسوم الورشات تشمل المواد الخام، المآزر الواقية، التوجيه الاحترافي، واستلام القطعة الفنية المصنوعة.",
+        bookBadge: "الحجز والتذاكر",
+        bookTitle: "احجزي مقعدكِ في الورشة",
+        bookDesc: "حددي المقر، الفئة العمرية، نوع الورشة، والتوقيت المناسب. يتحدث السعر تلقائياً بناءً على اختياركِ.",
+        feat1: "جميع المواد الأدوات شاملة في الرسوم.",
+        feat2: "تأخذين عملكِ اليدوي معكِ بعد الورشة.",
+        feat3: "تأطير وتوجيه من حرفيين متخصصين.",
+        formHeader: "نموذج طلب حجز الورشة",
+        lblNa: "الاسم الكامل",
+        lblPh: "رقم الهاتف / واتساب",
+        lblLoc: "مقر الأتيليه",
+        optLocSelect: "اختر المقر...",
+        optLocDjendel: "مقر أتيليه جندل",
+        optLocKhemis: "مقر أتيليه خميس مليانة",
+        lblCat: "فئة المشارك",
+        optCatKids: "أطفال (من 5 إلى 14 سنة)",
+        optCatAdults: "كبار وشباب (15 سنة فما فوق)",
+        lblWs: "اختر الورشة والسعر",
+        optWs1: "الفخار والسيراميك — 2,500 دج",
+        optWs2: "رسم الأكريليك واللوحات — 1,800 دج",
+        optWs3: "الخياطة والتطريز والباترون — 3,200 دج",
+        optWs4: "فن الريزين والحرف اليدوية — 2,800 دج",
+        lblTime: "التوقيت المناسب",
+        optTime1: "الحصة الصباحية (10:00 صباحاً – 12:30 ظهرًا)",
+        optTime2: "حصة المساء (14:00 مساءً – 16:30 مساءً)",
+        optTime3: "حصة نهاية الأسبوع (15:00 مساءً – 18:00 مساءً)",
+        lblTotal: "المبلغ الإجمالي",
+        lblPriceText: "السعر:",
+        btnSubmitForm: "تأكيد الحجز",
+        ftSub: "ورشات الفنون والحرف اليدوية — جندل وخميس مليانة",
+        ftRights: "أناقة باستيل بلمسة إيطالية",
+        alertMsg: "شكراً لكِ! تم حجز مقعدكِ في الورشة بنجاح."
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = (currentLang === 'en') ? 'ar' : 'en';
+      const htmlTag = document.getElementById('htmlTag');
+      htmlTag.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+      
+      const langData = translations[currentLang];
+      
+      Object.keys(langData).forEach(key => {
+        const el = document.getElementById(key);
+        if (el) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = langData[key];
+          } else {
+            el.innerHTML = langData[key];
+          }
+        }
+      });
+
+      updatePrice();
+    }
+
     function updatePrice() {
       const select = document.getElementById("workshopSelect");
       const display = document.getElementById("priceDisplay");
       const val = parseInt(select.value).toLocaleString();
-      display.innerText = val + " DZD";
+      const currency = currentLang === 'ar' ? 'دج' : 'DZD';
+      display.innerText = val + " " + currency;
+    }
+
+    function handleBookingSubmit() {
+      alert(translations[currentLang].alertMsg);
     }
 
     document.addEventListener("DOMContentLoaded", () => {
