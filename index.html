@@ -1,44 +1,45 @@
 <!doctype html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نُسك | وكالة الحج والعمرة الفاخرة</title>
+  <title>Atelier d'Arte — Creative & Artisan Workshops for Kids & Adults</title>
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   
-  <!-- Arabic Typography: Amiri & Plus Jakarta Sans -->
+  <!-- Italian Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-cream: #FAF7F2;
-      --bg-cream-dark: #F3EDE2;
-      --text-dark: #232B28;
-      --pastel-pink: #EAD5CE;
-      --pastel-pink-light: #F8F1EE;
-      --gold-accent: #C5A880;
-      --border-line: #E6DCCF;
+      --bg-cream: #FAF8F5;
+      --pastel-pink: #F8E1E7;
+      --pastel-blue: #D8EBF8;
+      --pastel-purple: #E8E0F5;
+      --pastel-yellow: #FAF1D6;
+      --pastel-mint: #DDEFE6;
+      --text-dark: #232220;
+      --border-line: #E8E1D7;
     }
     
     body { 
       background-color: var(--bg-cream); 
       color: var(--text-dark); 
-      font-family: 'Amiri', serif;
-    }
-
-    .font-sans-custom {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    /* Scroll Reveal Classes */
+    .font-serif-italiano {
+      font-family: 'Bodoni Moda', serif;
+    }
+
+    /* Scroll Reveal Motion */
     .reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(35px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.active {
@@ -46,18 +47,39 @@
       transform: translateY(0);
     }
 
-    /* Italian Glass Card Effects */
-    .italian-card {
-      background: rgba(250, 247, 242, 0.75);
-      backdrop-filter: blur(12px);
+    /* Italian Pastel Glass Card with Soft Glow Effect */
+    .pastel-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
       border: 1px solid var(--border-line);
-      transition: all 0.4s ease;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
     }
 
-    .italian-card:hover {
-      border-color: var(--gold-accent);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 30px -10px rgba(197, 168, 128, 0.15);
+    /* Interactive Soft Glow Following Cursor */
+    .pastel-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(248, 225, 231, 0.45), rgba(216, 235, 248, 0.35), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .pastel-card:hover::before, .pastel-card:active::before {
+      opacity: 1;
+    }
+
+    .pastel-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -15px rgba(232, 224, 245, 0.7);
     }
 
     /* Custom Scrollbar */
@@ -65,91 +87,105 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--bg-cream-dark);
+      background: #FAF8F5;
     }
     ::-webkit-scrollbar-thumb {
-      background: var(--gold-accent);
+      background: #E8E0F5;
       border-radius: 4px;
     }
   </style>
  </head>
 
- <body class="w-full min-h-screen antialiased selection:bg-[#EAD5CE] selection:text-[#232B28] overflow-x-hidden">
+ <body class="w-full min-h-screen antialiased selection:bg-[#F8E1E7] selection:text-[#232220] overflow-x-hidden">
 
   <!-- Header / Navigation -->
-  <header class="w-full border-b border-[#E6DCCF] bg-[#FAF7F2]/90 sticky top-0 z-40 backdrop-blur-md">
+  <header class="w-full border-b border-[#E8E1D7] bg-[#FAF8F5]/90 sticky top-0 z-40 backdrop-blur-md">
    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
     
     <a href="#" class="flex items-center gap-3">
-     <div class="w-10 h-10 rounded-full bg-[#EAD5CE]/40 border border-[#C5A880]/30 flex items-center justify-center text-[#232B28]">
-      <i data-lucide="compass" class="w-5 h-5 text-[#C5A880]"></i>
+     <div class="w-10 h-10 rounded-full bg-[#F8E1E7] border border-[#E8E1D7] flex items-center justify-center text-[#232220]">
+      <span class="font-serif-italiano italic font-bold text-xl text-[#232220]">A</span>
      </div>
      <div class="flex flex-col">
-      <span class="font-bold text-3xl tracking-wide text-[#232B28]">نُسك</span>
-      <span class="text-[10px] tracking-[0.2em] font-sans-custom uppercase text-[#C5A880] -mt-1">Italian Modern Voyages</span>
+      <span class="font-serif-italiano font-bold text-xl tracking-tight text-[#232220]">Atelier d'Arte</span>
+      <span class="text-[9px] tracking-[0.25em] font-medium uppercase text-[#9B829C] -mt-1">Djendel & Khemis Miliana</span>
      </div>
     </a>
     
-    <div class="hidden md:flex items-center gap-10 text-base font-medium text-[#232B28]/80">
-     <a class="hover:text-[#C5A880] transition-colors" href="#philosophy">فلسفتنا</a>
-     <a class="hover:text-[#C5A880] transition-colors" href="#experiences">التجارب الروحانية</a>
-     <a class="hover:text-[#C5A880] transition-colors" href="#journey">خطوات الرحلة</a>
-     <a class="hover:text-[#C5A880] transition-colors" href="#contact">التواصل</a>
+    <div class="hidden md:flex items-center gap-10 text-xs font-semibold uppercase tracking-widest text-[#232220]/70">
+     <a class="hover:text-[#9B829C] transition-colors" href="#about">About Atelier</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#workshops">Workshops</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#locations">Locations</a>
+     <a class="hover:text-[#9B829C] transition-colors" href="#booking">Book Workshop</a>
     </div>
 
-    <button type="button" onclick="openModal()" class="bg-[#232B28] text-[#FAF7F2] rounded-full px-7 py-3 text-sm font-bold tracking-wider hover:bg-[#C5A880] hover:text-[#232B28] transition-all duration-300 shadow-sm">
-     حجز رحلة خاصة
-    </button>
+    <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-7 py-3 text-xs font-bold tracking-widest uppercase hover:bg-[#E8E0F5] hover:text-[#232220] transition-all duration-300 shadow-sm">
+     Book a Seat
+    </a>
    </nav>
   </header>
 
   <main>
-   <!-- Hero Section: Editorial Italian Layout -->
-   <section class="w-full min-h-[90vh] flex items-center border-b border-[#E6DCCF] bg-[#F3EDE2] relative overflow-hidden py-20">
-    <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:32px_32px]"></div>
+   <!-- Hero Section with Custom Background Image Support -->
+   <section id="about" class="w-full min-h-[90vh] flex items-center border-b border-[#E8E1D7] relative overflow-hidden py-24 bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.85) 0%, rgba(248, 225, 231, 0.4) 100%), url('YOUR_IMAGE_URL');">
+    
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#E8E0F5_1.5px,transparent_1.5px)] [background-size:32px_32px]"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
      
-     <div class="lg:col-span-7 reveal">
-      <div class="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/40 bg-[#EAD5CE]/30 px-5 py-2 text-xs font-bold text-[#232B28] mb-8">
-       <span class="w-2 h-2 rounded-full bg-[#C5A880] animate-ping"></span> رحلات الحج والعمرة لعام 2026
+     <div class="lg:col-span-8 reveal">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[#E8E1D7] bg-[#D8EBF8]/60 px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#232220] mb-8">
+       <span class="w-2 h-2 rounded-full bg-[#9B829C] animate-pulse"></span> Workshops for Kids & Adults
       </div>
       
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] text-[#232B28]">
-       روحانية المَناسك.. <br>
-       <span class="italic font-bold text-[#C5A880]">بفخامة التصميم الإيطالي.</span>
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-normal leading-[1.15] text-[#232220] font-serif-italiano">
+       Unleash Creativity & <br>
+       <span class="italic font-normal text-[#9B829C]">Artisan Craftsmanship.</span>
       </h1>
       
-      <p class="mt-6 max-w-xl text-lg leading-relaxed text-[#232B28]/80">
-       نصنع لك تجربة استثنائية تفوق مجرد السفر. إقامة فاخرة، إرشاد شخصي، وعناية تامة بكل تفصيلة لتتفرّغ تماماً للعبادة والسكينة.
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-[#232220]/80 font-light">
+       Welcome to <strong class="font-semibold text-[#232220]">Atelier d'Arte</strong>. An Italian-inspired creative sanctuary located in <strong class="font-semibold text-[#232220]">Djendel</strong> and <strong class="font-semibold text-[#232220]">Khemis Miliana</strong>. We offer hands-on fine art, pottery, sewing, and craftsmanship workshops designed to inspire both kids and adults.
       </p>
       
       <div class="mt-10 flex flex-wrap items-center gap-5">
-       <button type="button" onclick="openModal()" class="bg-[#232B28] text-[#FAF7F2] rounded-full px-9 py-4 text-base font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all shadow-lg">
-        استكشف الرحلات المتاحة
-       </button>
+       <a href="#booking" class="bg-[#232220] text-[#FAF8F5] rounded-full px-9 py-4 text-xs font-bold tracking-widest uppercase hover:bg-[#F8E1E7] hover:text-[#232220] transition-all shadow-lg">
+        Book Your Workshop Now
+       </a>
        
-       <a href="#philosophy" class="rounded-full border border-[#232B28] bg-transparent px-8 py-4 text-base font-semibold text-[#232B28] hover:bg-[#232B28] hover:text-[#FAF7F2] transition-all">
-        كتالوج الخدمة
+       <a href="#workshops" class="rounded-full border border-[#232220] bg-transparent px-8 py-4 text-xs font-bold tracking-widest uppercase text-[#232220] hover:bg-[#232220] hover:text-[#FAF8F5] transition-all">
+        Explore All Programs
        </a>
       </div>
      </div>
 
-     <!-- Right Column: Visual Art Structure -->
-     <div class="lg:col-span-5 reveal">
-      <div class="relative rounded-[3rem] p-4 bg-[#FAF7F2] border border-[#E6DCCF] shadow-2xl">
-       <div class="relative rounded-[2.5rem] overflow-hidden h-[520px]">
-        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1000&auto=format&fit=crop" alt="Makkah View" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#232B28]/80 via-transparent to-transparent"></div>
+     <!-- Hero Side Card -->
+     <div class="lg:col-span-4 reveal">
+      <div class="pastel-card p-8 rounded-[2.5rem] bg-gradient-to-br from-[#F8E1E7]/70 via-[#E8E0F5]/50 to-[#D8EBF8]/70">
+       <div class="relative z-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Atelier Locations</span>
+        <h3 class="font-serif-italiano text-3xl font-normal text-[#232220] mt-3 leading-snug">Two Venues for Your Artistic Journey</h3>
         
-        <div class="absolute bottom-8 right-8 left-8 text-[#FAF7F2] backdrop-blur-md bg-white/10 p-6 rounded-2xl border border-white/20">
-         <div class="flex items-center justify-between">
+        <div class="mt-6 space-y-4">
+         <div class="flex items-start gap-3 bg-white/70 p-4 rounded-2xl border border-[#E8E1D7]">
+          <i data-lucide="map-pin" class="w-5 h-5 text-[#9B829C] shrink-0 mt-0.5"></i>
           <div>
-           <p class="text-xs uppercase font-sans-custom tracking-widest text-[#EAD5CE]">Private Suite</p>
-           <h3 class="text-xl font-bold mt-1">إطلالة مباشرة على الحرم</h3>
+           <h4 class="font-bold text-sm text-[#232220]">Djendel Center</h4>
+           <p class="text-xs text-[#232220]/70 mt-0.5">Kids & Teen Creative Studio</p>
           </div>
-          <span class="w-10 h-10 rounded-full bg-[#EAD5CE] text-[#232B28] flex items-center justify-center font-bold">5★</span>
          </div>
+
+         <div class="flex items-start gap-3 bg-white/70 p-4 rounded-2xl border border-[#E8E1D7]">
+          <i data-lucide="map-pin" class="w-5 h-5 text-[#9B829C] shrink-0 mt-0.5"></i>
+          <div>
+           <h4 class="font-bold text-sm text-[#232220]">Khemis Miliana Hub</h4>
+           <p class="text-xs text-[#232220]/70 mt-0.5">Adult Fine Art & Crafts Studio</p>
+          </div>
+         </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-[#E8E1D7] flex items-center justify-between">
+         <span class="text-xs font-bold uppercase tracking-wider text-[#232220]/70">Weekly Sessions Available</span>
+         <i data-lucide="palette" class="w-5 h-5 text-[#9B829C]"></i>
         </div>
        </div>
       </div>
@@ -158,173 +194,275 @@
     </div>
    </section>
 
-   <!-- Philosophy Section (Italian Aesthetic Editorial) -->
-   <section id="philosophy" class="w-full py-28 bg-[#FAF7F2] border-b border-[#E6DCCF]">
-    <div class="max-w-7xl mx-auto px-6">
-     <div class="grid lg:grid-cols-12 gap-12 items-center">
-      
-      <div class="lg:col-span-5 reveal">
-       <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">فلسفة الراحة</span>
-       <h2 class="text-4xl sm:text-5xl font-normal text-[#232B28] mt-3 leading-tight">العناية بالتفاصيل هي جوهر السكينة</h2>
-      </div>
-
-      <div class="lg:col-span-7 reveal">
-       <p class="text-xl text-[#232B28]/80 leading-relaxed font-light">
-        نؤمن في "نُسك" أن الرحلة الروحانية تكتمل عندما تلتقي الرفاهية بالبساطة الإيطالية. نوفر لضيوف الرحمن مواصلات خاصة بفنادق عالمية، وجداول زكية تضمن لك أداء المناسك بأعلى درجات الراحة واليسر.
-       </p>
-      </div>
-
-     </div>
-    </div>
-   </section>
-
-   <!-- New Structure: Asymmetric Storytelling Experiences -->
-   <section id="experiences" class="w-full py-28 bg-[#F3EDE2] border-b border-[#E6DCCF]">
+   <!-- Workshops Gallery Section -->
+   <section id="workshops" class="w-full py-28 bg-[#FAF8F5] border-b border-[#E8E1D7]">
     <div class="max-w-7xl mx-auto px-6">
      
      <div class="text-center max-w-2xl mx-auto mb-20 reveal">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">برامجنا الحصرية</span>
-      <h2 class="text-4xl sm:text-5xl font-normal text-[#232B28] mt-2">تجارب مُصممة لراحتك</h2>
+      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Curated Experiences</span>
+      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Artistic & Crafts Workshops</h2>
+      <p class="text-sm text-[#232220]/70 mt-4">Select a workshop suitable for your age group and interest level.</p>
      </div>
 
-     <!-- Alternating Layout 1 -->
-     <div class="grid lg:grid-cols-12 gap-12 items-center mb-20 reveal">
-      <div class="lg:col-span-6 order-2 lg:order-1">
-       <div class="rounded-[2.5rem] overflow-hidden border border-[#E6DCCF] h-[400px]">
-        <img src="https://images.unsplash.com/photo-1565552070094-011552593475?q=80&w=1000&auto=format&fit=crop" alt="Luxury Hotel" class="w-full h-full object-cover">
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Workshop 1 (Ceramics) -->
+      <div class="pastel-card p-8 rounded-[2.5rem] bg-[#F8E1E7]/40 flex flex-col justify-between reveal">
+       <div class="relative z-10">
+        <div class="w-12 h-12 rounded-2xl bg-[#F8E1E7] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
+         <i data-lucide="shapes" class="w-6 h-6"></i>
+        </div>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FAF1D6] text-[#232220] mb-3">Kids & Adults</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Ceramics & Pottery</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Learn hand-building, clay molding, sculpting, and wheel throwing with organic glazes.</p>
+       </div>
+       
+       <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
+        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,500 DZD</span>
        </div>
       </div>
-      <div class="lg:col-span-6 order-1 lg:order-2 space-y-4">
-       <span class="text-sm font-bold text-[#C5A880] uppercase tracking-wider">01. الباقة الملكية</span>
-       <h3 class="text-3xl sm:text-4xl font-bold text-[#232B28]">عمرة الرفاهية المطلقة</h3>
-       <p class="text-base text-[#232B28]/70 leading-relaxed">إقامة في أجنحة مطلة على الكعبة المشرفة مباشرة، طيران درجة أولى، ومرافق شخصي لتسهيل كافة الإجراءات والتنقلات على مدار الساعة.</p>
-       <ul class="space-y-2 text-sm text-[#232B28]/90 pt-2">
-        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> سيارات سيارات خاصة للتنقل بين مكة والمدينة</li>
-        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> بوفيه مفتوح بإشراف طهاة عالميين</li>
-       </ul>
-       <button onclick="openModal()" class="mt-4 bg-[#232B28] text-[#FAF7F2] rounded-full px-8 py-3.5 text-sm font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all">طلب الباقة</button>
-      </div>
-     </div>
 
-     <!-- Alternating Layout 2 -->
-     <div class="grid lg:grid-cols-12 gap-12 items-center reveal">
-      <div class="lg:col-span-6 space-y-4">
-       <span class="text-sm font-bold text-[#C5A880] uppercase tracking-wider">02. البرامج العائلية</span>
-       <h3 class="text-3xl sm:text-4xl font-bold text-[#232B28]">رحلات العائلات والمجموعات</h3>
-       <p class="text-base text-[#232B28]/70 leading-relaxed">برامج مخصصة لتوفير أقصى درجات الراحة لكبار السن والأطفال، مع تنظيم جولات تاريخية وثقافية للمعالم الإسلامية في المدينة المنورة.</p>
-       <ul class="space-y-2 text-sm text-[#232B28]/90 pt-2">
-        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> مرشد ديني وثقافي مخصص للمجموعة</li>
-        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#C5A880]"></i> خدمات الرعاية والعناية الخاصة</li>
-       </ul>
-       <button onclick="openModal()" class="mt-4 bg-[#232B28] text-[#FAF7F2] rounded-full px-8 py-3.5 text-sm font-bold hover:bg-[#C5A880] hover:text-[#232B28] transition-all">طلب الباقة</button>
-      </div>
-      <div class="lg:col-span-6">
-       <div class="rounded-[2.5rem] overflow-hidden border border-[#E6DCCF] h-[400px]">
-        <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1000&auto=format&fit=crop" alt="Madinah View" class="w-full h-full object-cover">
+      <!-- Workshop 2 (Painting) -->
+      <div class="pastel-card p-8 rounded-[2.5rem] bg-[#D8EBF8]/40 flex flex-col justify-between reveal">
+       <div class="relative z-10">
+        <div class="w-12 h-12 rounded-2xl bg-[#D8EBF8] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
+         <i data-lucide="brush" class="w-6 h-6"></i>
+        </div>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#F8E1E7] text-[#232220] mb-3">Kids Special</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Acrylic & Canvas</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Color mixing, brush techniques, and expressive painting inspired by modern Italian art.</p>
+       </div>
+       
+       <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
+        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="font-serif-italiano font-bold text-lg text-[#232220]">1,800 DZD</span>
        </div>
       </div>
-     </div>
 
+      <!-- Workshop 3 (Textiles & Sewing) -->
+      <div class="pastel-card p-8 rounded-[2.5rem] bg-[#E8E0F5]/40 flex flex-col justify-between reveal">
+       <div class="relative z-10">
+        <div class="w-12 h-12 rounded-2xl bg-[#E8E0F5] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
+         <i data-lucide="scissors" class="w-6 h-6"></i>
+        </div>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#DDEFE6] text-[#232220] mb-3">Adults Masterclass</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Sewing & Embroidery</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Garment patterns, hand embroidery, fabric cutting, and decorative artisan stitchery.</p>
+       </div>
+       
+       <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
+        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="font-serif-italiano font-bold text-lg text-[#232220]">3,200 DZD</span>
+       </div>
+      </div>
+
+      <!-- Workshop 4 (Resin & Origami Crafts) -->
+      <div class="pastel-card p-8 rounded-[2.5rem] bg-[#FAF1D6]/40 flex flex-col justify-between reveal">
+       <div class="relative z-10">
+        <div class="w-12 h-12 rounded-2xl bg-[#FAF1D6] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
+         <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <span class="inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#D8EBF8] text-[#232220] mb-3">All Ages</span>
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]">Resin Art & Crafts</h3>
+        <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed">Creating custom resin coasters, jewelry, botanical frames, and paper origami architecture.</p>
+       </div>
+       
+       <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
+        <span class="text-xs font-bold text-[#232220]/60">Starting from</span>
+        <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,800 DZD</span>
+       </div>
+      </div>
+
+     </div>
     </div>
    </section>
 
-   <!-- Modern Timeline Step Feature -->
-   <section id="journey" class="w-full py-28 bg-[#FAF7F2] border-b border-[#E6DCCF]">
+   <!-- Locations Overview -->
+   <section id="locations" class="w-full py-28 bg-[#FAF8F5] border-b border-[#E8E1D7]">
     <div class="max-w-7xl mx-auto px-6">
-     <div class="text-center max-w-xl mx-auto mb-20 reveal">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">سلاسة الإجراءات</span>
-      <h2 class="text-4xl font-normal text-[#232B28] mt-2">رحلتك معنا في 4 خطوات</h2>
-     </div>
-
-     <div class="grid md:grid-cols-4 gap-8">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
       
-      <div class="italian-card p-8 rounded-[2rem] reveal">
-       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">01</span>
-       <h4 class="text-xl font-bold text-[#232B28] mt-4">اختيار البرنامج</h4>
-       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">حدد المواعيد والباقة المناسبة لتطلعاتك واحتياجاتك الشخصية.</p>
+      <div class="reveal">
+       <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Our Dual Studios</span>
+       <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Djendel & Khemis Miliana</h2>
+       <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed">
+        Our studios are equipped with professional artistic materials, safe tools for children, and peaceful Italian background music to create an inspirational environment.
+       </p>
+
+       <div class="mt-8 grid sm:grid-cols-2 gap-6">
+        <div class="pastel-card p-6 rounded-2xl bg-[#F8E1E7]/30">
+         <div class="font-serif-italiano text-xl font-bold text-[#232220]">Djendel Studio</div>
+         <p class="text-xs text-[#232220]/70 mt-2">Rue Principal, Near Center Community Hub.</p>
+         <div class="mt-4 text-xs font-bold text-[#9B829C]">Sat — Wed: 09:00 - 17:00</div>
+        </div>
+
+        <div class="pastel-card p-6 rounded-2xl bg-[#D8EBF8]/30">
+         <div class="font-serif-italiano text-xl font-bold text-[#232220]">Khemis Miliana Studio</div>
+         <p class="text-xs text-[#232220]/70 mt-2">Avenue de l'Université, Opposite Arts Center.</p>
+         <div class="mt-4 text-xs font-bold text-[#9B829C]">Thu — Sat: 10:00 - 19:00</div>
+        </div>
+       </div>
       </div>
 
-      <div class="italian-card p-8 rounded-[2rem] reveal">
-       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">02</span>
-       <h4 class="text-xl font-bold text-[#232B28] mt-4">إصدار التأشيرة</h4>
-       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">نقوم بجميع المعاملات الرسمية وحجوزات الطيران والفنادق بسرعة فائقة.</p>
-      </div>
-
-      <div class="italian-card p-8 rounded-[2rem] reveal">
-       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">03</span>
-       <h4 class="text-xl font-bold text-[#232B28] mt-4">الاستقبال الخاص</h4>
-       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">فريقنا الإرشادي في انتظارك في المطار فور وصولك للترحيب بك.</p>
-      </div>
-
-      <div class="italian-card p-8 rounded-[2rem] reveal">
-       <span class="text-3xl font-bold text-[#C5A880] font-sans-custom">04</span>
-       <h4 class="text-xl font-bold text-[#232B28] mt-4">أداء المناسك</h4>
-       <p class="text-xs text-[#232B28]/70 mt-2 leading-relaxed">أداء العبادات بكل تفرغ وراحة مع مراقبة ومتابعة دقيقة لخدمتك.</p>
+      <!-- Pastel Visual Box -->
+      <div class="pastel-card p-10 rounded-[3rem] bg-gradient-to-tr from-[#E8E0F5] via-[#F8E1E7] to-[#FAF1D6] reveal">
+       <div class="relative z-10 text-center py-8">
+        <div class="w-20 h-20 mx-auto rounded-full bg-white/80 border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6 shadow-sm">
+         <i data-lucide="palette" class="w-10 h-10 text-[#9B829C]"></i>
+        </div>
+        <h3 class="font-serif-italiano text-3xl font-bold text-[#232220]">"Art is freedom in harmony."</h3>
+        <p class="text-xs text-[#232220]/70 mt-4 max-w-sm mx-auto">All workshop fees include raw materials, protective aprons, guided instruction, and your finished handmade creation to keep.</p>
+       </div>
       </div>
 
      </div>
+    </div>
+   </section>
+
+   <!-- Interactive Booking Form Section -->
+   <section id="booking" class="w-full py-28 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+     
+     <div class="lg:col-span-5 reveal">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]">Reservation & Ticket</span>
+      <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2">Book Your Workshop Seat</h2>
+      <p class="text-sm text-[#232220]/70 mt-4 leading-relaxed">
+       Select your preferred location, target age group, workshop category, and time slot. Prices update dynamically based on your selection.
+      </p>
+
+      <div class="mt-8 space-y-4 text-xs">
+       <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#FAF1D6] flex items-center justify-center text-[#232220] font-bold">✓</div>
+        <span>All raw materials and tools included in fee.</span>
+       </div>
+       <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#DDEFE6] flex items-center justify-center text-[#232220] font-bold">✓</div>
+        <span>Take home your handcrafted artwork.</span>
+       </div>
+       <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-[#F8E1E7] flex items-center justify-center text-[#232220] font-bold">✓</div>
+        <span>Certified artisan instruction & guidance.</span>
+       </div>
+      </div>
+     </div>
+
+     <!-- Interactive Booking Card -->
+     <div class="lg:col-span-7 reveal">
+      <div class="pastel-card p-10 rounded-[2.5rem] bg-white/90">
+       <div class="relative z-10">
+        <h3 class="text-2xl font-bold font-serif-italiano text-[#232220] mb-6">Workshop Reservation Form</h3>
+        
+        <form id="bookingForm" class="space-y-4 text-xs" onsubmit="event.preventDefault(); alert('Grazie! Your workshop seat has been reserved successfully.');">
+         
+         <div class="grid md:grid-cols-2 gap-4">
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Full Name</label>
+           <input type="text" required placeholder="e.g. Sofia Rahil" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+          </div>
+
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Phone / WhatsApp</label>
+           <input type="tel" required placeholder="+213 500 000 000" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+          </div>
+         </div>
+
+         <div class="grid md:grid-cols-2 gap-4">
+          <!-- Location Selection -->
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Studio Location</label>
+           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+            <option value="">Select location...</option>
+            <option value="djendel">Djendel Atelier Studio</option>
+            <option value="khemis">Khemis Miliana Atelier Studio</option>
+           </select>
+          </div>
+
+          <!-- Participant Category -->
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Participant Category</label>
+           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+            <option value="kids">Kids (Ages 5 - 14)</option>
+            <option value="adults">Adults & Teens (15+)</option>
+           </select>
+          </div>
+         </div>
+
+         <!-- Workshop Selection with Dynamic Price -->
+         <div>
+          <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Select Workshop & Price</label>
+          <select id="workshopSelect" required onchange="updatePrice()" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all font-semibold">
+           <option value="2500">Ceramics & Clay Pottery — 2,500 DZD</option>
+           <option value="1800">Acrylic Painting & Canvas — 1,800 DZD</option>
+           <option value="3200">Textiles, Sewing & Patterns — 3,200 DZD</option>
+           <option value="2800">Resin Art & Handcrafts — 2,800 DZD</option>
+          </select>
+         </div>
+
+         <div class="grid md:grid-cols-2 gap-4">
+          <!-- Preferred Timing Slot -->
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Suitable Time Slot</label>
+           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+            <option value="morning">Morning Session (10:00 AM – 12:30 PM)</option>
+            <option value="afternoon">Afternoon Session (14:00 PM – 16:30 PM)</option>
+            <option value="weekend">Weekend Special (15:00 PM – 18:00 PM)</option>
+           </select>
+          </div>
+
+          <!-- Total Calculated Price Display -->
+          <div>
+           <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2">Total Fee</label>
+           <div class="w-full bg-[#FAF1D6]/60 border border-[#E8E1D7] rounded-xl px-5 py-3 text-[#232220] font-serif-italiano font-bold text-lg flex items-center justify-between">
+            <span>Price:</span>
+            <span id="priceDisplay" class="text-[#232220]">2,500 DZD</span>
+           </div>
+          </div>
+         </div>
+
+         <button type="submit" class="w-full bg-[#232220] text-[#FAF8F5] font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-[#F8E1E7] hover:text-[#232220] transition-all mt-4 shadow-md">
+          Confirm Reservation
+         </button>
+        </form>
+       </div>
+      </div>
+     </div>
+
     </div>
    </section>
   </main>
 
   <!-- Footer -->
-  <footer id="contact" class="w-full bg-[#232B28] text-[#FAF7F2] py-16">
-   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-[#FAF7F2]/10 pb-12">
+  <footer class="w-full bg-[#232220] text-[#FAF8F5] py-16 border-t border-[#FAF8F5]/10">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-[#FAF8F5]/10 pb-12">
     <div>
-     <h3 class="text-3xl font-bold">نُسك</h3>
-     <p class="text-xs text-[#EAD5CE] mt-1">وكالة الحج والعمرة الإيطالية الفاخرة</p>
+     <h3 class="font-serif-italiano text-3xl font-normal">Atelier d'Arte</h3>
+     <p class="text-xs text-[#E8E0F5] mt-1 tracking-widest uppercase">Artistic & Crafts Workshops — Djendel & Khemis Miliana</p>
     </div>
 
-    <div class="flex items-center gap-8 text-sm text-[#FAF7F2]/80">
-     <a href="#" class="hover:text-[#C5A880]">الشروط والأحكام</a>
-     <a href="#" class="hover:text-[#C5A880]">سياسة الخصوصية</a>
-     <a href="#" class="hover:text-[#C5A880]">تواصل معنا</a>
+    <div class="flex items-center gap-8 text-xs uppercase tracking-widest text-[#FAF8F5]/70">
+     <a href="#about" class="hover:text-[#F8E1E7] transition-colors">About</a>
+     <a href="#workshops" class="hover:text-[#F8E1E7] transition-colors">Workshops</a>
+     <a href="#locations" class="hover:text-[#F8E1E7] transition-colors">Locations</a>
+     <a href="#booking" class="hover:text-[#F8E1E7] transition-colors">Booking</a>
     </div>
    </div>
 
-   <div class="max-w-7xl mx-auto px-6 mt-8 flex justify-between items-center text-xs text-[#FAF7F2]/50 font-sans-custom">
-    <p>© 2026 NUSUK Luxury Pilgrimage Voyages S.r.l. All rights reserved.</p>
-    <p>Milano • Jeddah • Makkah</p>
+   <div class="max-w-7xl mx-auto px-6 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-[#FAF8F5]/40 gap-4">
+    <p>© 2026 Atelier d'Arte. All rights reserved.</p>
+    <p class="uppercase tracking-widest">Italian Aesthetic & Pastel Elegance</p>
    </div>
   </footer>
 
-  <!-- Booking Modal Component -->
-  <div id="bookingModal" class="fixed inset-0 z-50 bg-[#232B28]/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
-   <div class="bg-[#FAF7F2] w-full max-w-lg rounded-[2.5rem] border border-[#E6DCCF] p-8 relative shadow-2xl">
-    <button onclick="closeModal()" class="absolute top-6 left-6 text-gray-400 hover:text-[#232B28]">✕</button>
-    
-    <span class="text-xs font-bold uppercase tracking-widest text-[#C5A880]">حجز مخصص</span>
-    <h3 class="text-2xl font-bold text-[#232B28] mt-1">تصميم رحلتك الروحانية</h3>
-    
-    <form class="mt-6 space-y-4 text-sm" onsubmit="event.preventDefault(); alert('تم استلام طلبكم بنجاح، سيتواصل معكم مستشارنا الروحاني خلال 24 ساعة.'); closeModal();">
-     <div>
-      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">الاسم الكامل</label>
-      <input type="text" required placeholder="أدخل اسمك الكريم" class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
-     </div>
-
-     <div>
-      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">رقم الهاتف / الواتساب</label>
-      <input type="tel" required placeholder="+966 50 000 0000" class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
-     </div>
-
-     <div>
-      <label class="block text-xs font-bold text-[#232B28]/70 mb-1">نوع الرحلة</label>
-      <select class="w-full bg-[#F3EDE2] border border-[#E6DCCF] rounded-xl px-4 py-3 text-[#232B28] outline-none focus:border-[#C5A880]">
-       <option>عمرة الفخامة الملكية</option>
-       <option>برنامج العائلات</option>
-       <option>رحلة الحج VIP</option>
-      </select>
-     </div>
-
-     <button type="submit" class="w-full bg-[#232B28] text-[#FAF7F2] font-bold py-4 rounded-xl text-sm hover:bg-[#C5A880] hover:text-[#232B28] transition-all mt-4">
-      إرسال طلب الاستشارة
-     </button>
-    </form>
-   </div>
-  </div>
-
-  <!-- Smooth Scroll Reveal Script -->
+  <!-- Scripts for Animations, Glow Effects, and Dynamic Pricing -->
   <script>
+    function updatePrice() {
+      const select = document.getElementById("workshopSelect");
+      const display = document.getElementById("priceDisplay");
+      const val = parseInt(select.value).toLocaleString();
+      display.innerText = val + " DZD";
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
 
@@ -338,16 +476,18 @@
       }, { threshold: 0.1 });
 
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    });
 
-    // Modal Control
-    const modal = document.getElementById("bookingModal");
-    function openModal() {
-      modal.classList.remove("opacity-0", "pointer-events-none");
-    }
-    function closeModal() {
-      modal.classList.add("opacity-0", "pointer-events-none");
-    }
+      // Dynamic Card Glow Light Following Cursor
+      document.querySelectorAll('.pastel-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+    });
   </script>
  </body>
 </html>
