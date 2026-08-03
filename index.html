@@ -36,7 +36,6 @@
       font-family: 'Bodoni Moda', 'Alexandria', serif;
     }
 
-    /* Scroll Reveal Motion */
     .reveal {
       opacity: 0;
       transform: translateY(35px);
@@ -47,7 +46,6 @@
       transform: translateY(0);
     }
 
-    /* Italian Pastel Glass Card with Soft Glow Effect */
     .pastel-card {
       position: relative;
       background: rgba(255, 255, 255, 0.85);
@@ -57,7 +55,6 @@
       overflow: hidden;
     }
 
-    /* Interactive Soft Glow Following Cursor */
     .pastel-card::before {
       content: '';
       position: absolute;
@@ -82,7 +79,6 @@
       box-shadow: 0 20px 40px -15px rgba(232, 224, 245, 0.7);
     }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -101,7 +97,6 @@
   <!-- Header / Navigation -->
   <header class="w-full border-b border-[#E8E1D7] bg-[#FAF8F5]/90 sticky top-0 z-40 backdrop-blur-md">
    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-    
     <a href="#" class="flex items-center gap-3">
      <div class="w-10 h-10 rounded-full bg-[#F8E1E7] border border-[#E8E1D7] flex items-center justify-center text-[#232220]">
       <span class="font-serif-italiano italic font-bold text-xl text-[#232220]">A</span>
@@ -120,7 +115,6 @@
     </div>
 
     <div class="flex items-center gap-4">
-     <!-- Language Toggle Button -->
      <button onclick="toggleLanguage()" class="border border-[#E8E1D7] bg-white/80 rounded-full px-4 py-2 text-xs font-bold text-[#232220] hover:bg-[#FAF1D6] transition-all flex items-center gap-1.5 shadow-sm">
       <i data-lucide="globe" class="w-3.5 h-3.5 text-[#9B829C]"></i>
       <span id="langBtnText">العربية</span>
@@ -134,13 +128,11 @@
   </header>
 
   <main>
-   <!-- Hero Section with Custom Background Image Support -->
+   <!-- Hero Section -->
    <section id="about" class="w-full min-h-[90vh] flex items-center border-b border-[#E8E1D7] relative overflow-hidden py-24 bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(250, 248, 245, 0.85) 0%, rgba(248, 225, 231, 0.45) 100%), url('YOUR_IMAGE_URL');">
-    
     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#E8E0F5_1.5px,transparent_1.5px)] [background-size:32px_32px]"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
-     
      <div class="lg:col-span-8 reveal">
       <div class="inline-flex items-center gap-2 rounded-full border border-[#E8E1D7] bg-[#D8EBF8]/60 px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#232220] mb-8">
        <span class="w-2 h-2 rounded-full bg-[#9B829C] animate-pulse"></span> <span id="heroBadge">Workshops for Kids & Adults</span>
@@ -166,7 +158,6 @@
       </div>
      </div>
 
-     <!-- Hero Side Card -->
      <div class="lg:col-span-4 reveal">
       <div class="pastel-card p-8 rounded-[2.5rem] bg-gradient-to-br from-[#F8E1E7]/70 via-[#E8E0F5]/50 to-[#D8EBF8]/70">
        <div class="relative z-10">
@@ -198,14 +189,12 @@
        </div>
       </div>
      </div>
-
     </div>
    </section>
 
-   <!-- Workshops Gallery Section -->
+   <!-- Workshops Gallery -->
    <section id="workshops" class="w-full py-28 bg-[#FAF8F5] border-b border-[#E8E1D7]">
     <div class="max-w-7xl mx-auto px-6">
-     
      <div class="text-center max-w-2xl mx-auto mb-20 reveal">
       <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="workshopsBadge">Curated Experiences</span>
       <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2" id="workshopsTitle">Artistic & Crafts Workshops</h2>
@@ -213,8 +202,6 @@
      </div>
 
      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <!-- Workshop 1 (Ceramics) -->
       <div class="pastel-card p-8 rounded-[2.5rem] bg-[#F8E1E7]/40 flex flex-col justify-between reveal">
        <div class="relative z-10">
         <div class="w-12 h-12 rounded-2xl bg-[#F8E1E7] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
@@ -224,14 +211,12 @@
         <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws1Title">Ceramics & Pottery</h3>
         <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws1Desc">Learn hand-building, clay molding, sculpting, and wheel throwing with organic glazes.</p>
        </div>
-       
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
         <span class="text-xs font-bold text-[#232220]/60" id="wsStart1">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,500 DZD</span>
        </div>
       </div>
 
-      <!-- Workshop 2 (Painting) -->
       <div class="pastel-card p-8 rounded-[2.5rem] bg-[#D8EBF8]/40 flex flex-col justify-between reveal">
        <div class="relative z-10">
         <div class="w-12 h-12 rounded-2xl bg-[#D8EBF8] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
@@ -241,14 +226,12 @@
         <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws2Title">Acrylic & Canvas</h3>
         <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws2Desc">Color mixing, brush techniques, and expressive painting inspired by modern Italian art.</p>
        </div>
-       
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
         <span class="text-xs font-bold text-[#232220]/60" id="wsStart2">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">1,800 DZD</span>
        </div>
       </div>
 
-      <!-- Workshop 3 (Textiles & Sewing) -->
       <div class="pastel-card p-8 rounded-[2.5rem] bg-[#E8E0F5]/40 flex flex-col justify-between reveal">
        <div class="relative z-10">
         <div class="w-12 h-12 rounded-2xl bg-[#E8E0F5] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
@@ -258,14 +241,12 @@
         <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws3Title">Sewing & Embroidery</h3>
         <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws3Desc">Garment patterns, hand embroidery, fabric cutting, and decorative artisan stitchery.</p>
        </div>
-       
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
         <span class="text-xs font-bold text-[#232220]/60" id="wsStart3">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">3,200 DZD</span>
        </div>
       </div>
 
-      <!-- Workshop 4 (Resin & Origami Crafts) -->
       <div class="pastel-card p-8 rounded-[2.5rem] bg-[#FAF1D6]/40 flex flex-col justify-between reveal">
        <div class="relative z-10">
         <div class="w-12 h-12 rounded-2xl bg-[#FAF1D6] border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6">
@@ -275,13 +256,11 @@
         <h3 class="text-2xl font-bold font-serif-italiano text-[#232220]" id="ws4Title">Resin Art & Crafts</h3>
         <p class="text-xs text-[#232220]/70 mt-3 leading-relaxed" id="ws4Desc">Creating custom resin coasters, jewelry, botanical frames, and paper origami architecture.</p>
        </div>
-       
        <div class="relative z-10 mt-8 pt-4 border-t border-[#E8E1D7] flex items-center justify-between">
         <span class="text-xs font-bold text-[#232220]/60" id="wsStart4">Starting from</span>
         <span class="font-serif-italiano font-bold text-lg text-[#232220]">2,800 DZD</span>
        </div>
       </div>
-
      </div>
     </div>
    </section>
@@ -290,7 +269,6 @@
    <section id="locations" class="w-full py-28 bg-[#FAF8F5] border-b border-[#E8E1D7]">
     <div class="max-w-7xl mx-auto px-6">
      <div class="grid lg:grid-cols-2 gap-12 items-center">
-      
       <div class="reveal">
        <span class="text-xs font-bold uppercase tracking-widest text-[#9B829C]" id="locSectionBadge">Our Dual Studios</span>
        <h2 class="text-4xl sm:text-5xl font-normal font-serif-italiano text-[#232220] mt-2" id="locSectionTitle">Djendel & Khemis Miliana</h2>
@@ -313,7 +291,6 @@
        </div>
       </div>
 
-      <!-- Pastel Visual Box -->
       <div class="pastel-card p-10 rounded-[3rem] bg-gradient-to-tr from-[#E8E0F5] via-[#F8E1E7] to-[#FAF1D6] reveal">
        <div class="relative z-10 text-center py-8">
         <div class="w-20 h-20 mx-auto rounded-full bg-white/80 border border-[#E8E1D7] flex items-center justify-center text-[#232220] mb-6 shadow-sm">
@@ -323,7 +300,6 @@
         <p class="text-xs text-[#232220]/70 mt-4 max-w-sm mx-auto" id="quoteDesc">All workshop fees include raw materials, protective aprons, guided instruction, and your finished handmade creation to keep.</p>
        </div>
       </div>
-
      </div>
     </div>
    </section>
@@ -361,17 +337,17 @@
        <div class="relative z-10">
         <h3 class="text-2xl font-bold font-serif-italiano text-[#232220] mb-6" id="formHeader">Workshop Reservation Form</h3>
         
-        <form id="bookingForm" class="space-y-4 text-xs" onsubmit="event.preventDefault(); handleBookingSubmit();">
+        <form id="bookingForm" class="space-y-4 text-xs" onsubmit="event.preventDefault(); sendToWhatsApp();">
          
          <div class="grid md:grid-cols-2 gap-4">
           <div>
            <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblNa">Full Name</label>
-           <input type="text" required placeholder="e.g. Sofia Rahil" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+           <input type="text" id="custName" required placeholder="e.g. Sofia Rahil" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
           </div>
 
           <div>
            <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblPh">Phone / WhatsApp</label>
-           <input type="tel" required placeholder="+213 500 000 000" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+           <input type="tel" id="custPhone" required placeholder="+213 500 000 000" class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
           </div>
          </div>
 
@@ -379,19 +355,19 @@
           <!-- Location Selection -->
           <div>
            <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblLoc">Studio Location</label>
-           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+           <select id="custLocation" required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
             <option value="" id="optLocSelect">Select location...</option>
-            <option value="djendel" id="optLocDjendel">Djendel Atelier Studio</option>
-            <option value="khemis" id="optLocKhemis">Khemis Miliana Atelier Studio</option>
+            <option value="Djendel Studio" id="optLocDjendel">Djendel Atelier Studio</option>
+            <option value="Khemis Miliana Studio" id="optLocKhemis">Khemis Miliana Atelier Studio</option>
            </select>
           </div>
 
           <!-- Participant Category -->
           <div>
            <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblCat">Participant Category</label>
-           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
-            <option value="kids" id="optCatKids">Kids (Ages 5 - 14)</option>
-            <option value="adults" id="optCatAdults">Adults & Teens (15+)</option>
+           <select id="custCategory" required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+            <option value="Kids (5-14 yrs)" id="optCatKids">Kids (Ages 5 - 14)</option>
+            <option value="Adults (15+ yrs)" id="optCatAdults">Adults & Teens (15+)</option>
            </select>
           </div>
          </div>
@@ -411,10 +387,10 @@
           <!-- Preferred Timing Slot -->
           <div>
            <label class="block font-bold uppercase tracking-widest text-[#232220]/60 mb-2" id="lblTime">Suitable Time Slot</label>
-           <select required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
-            <option value="morning" id="optTime1">Morning Session (10:00 AM – 12:30 PM)</option>
-            <option value="afternoon" id="optTime2">Afternoon Session (14:00 PM – 16:30 PM)</option>
-            <option value="weekend" id="optTime3">Weekend Special (15:00 PM – 18:00 PM)</option>
+           <select id="custTime" required class="w-full bg-[#FAF8F5] border border-[#E8E1D7] rounded-xl px-5 py-3.5 text-[#232220] outline-none focus:border-[#9B829C] transition-all">
+            <option value="Morning (10:00 - 12:30)" id="optTime1">Morning Session (10:00 AM – 12:30 PM)</option>
+            <option value="Afternoon (14:00 - 16:30)" id="optTime2">Afternoon Session (14:00 PM – 16:30 PM)</option>
+            <option value="Weekend Special (15:00 - 18:00)" id="optTime3">Weekend Special (15:00 PM – 18:00 PM)</option>
            </select>
           </div>
 
@@ -428,8 +404,9 @@
           </div>
          </div>
 
-         <button type="submit" id="btnSubmitForm" class="w-full bg-[#232220] text-[#FAF8F5] font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-[#F8E1E7] hover:text-[#232220] transition-all mt-4 shadow-md">
-          Confirm Reservation
+         <button type="submit" id="btnSubmitForm" class="w-full bg-[#232220] text-[#FAF8F5] font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-[#F8E1E7] hover:text-[#232220] transition-all mt-4 shadow-md flex items-center justify-center gap-2">
+          <span>Confirm Reservation</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
          </button>
         </form>
        </div>
@@ -440,35 +417,27 @@
    </section>
   </main>
 
-  <!-- Footer with Social Icons (Facebook, Instagram, TikTok Only) -->
+  <!-- Footer -->
   <footer class="w-full bg-[#232220] text-[#FAF8F5] py-16 border-t border-[#FAF8F5]/10">
    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 border-b border-[#FAF8F5]/10 pb-12">
-    
     <div>
      <h3 class="font-serif-italiano text-3xl font-normal">Atelier d'Arte</h3>
      <p class="text-xs text-[#E8E0F5] mt-1 tracking-widest uppercase" id="ftSub">Artistic & Crafts Workshops — Djendel & Khemis Miliana</p>
     </div>
 
-    <!-- Social Media Links (Facebook, Instagram, TikTok ONLY) -->
     <div class="flex items-center gap-4">
-     <!-- Facebook -->
      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#D8EBF8] hover:text-[#232220] hover:border-[#D8EBF8] transition-all" title="Facebook">
       <i data-lucide="facebook" class="w-5 h-5"></i>
      </a>
-
-     <!-- Instagram -->
      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#F8E1E7] hover:text-[#232220] hover:border-[#F8E1E7] transition-all" title="Instagram">
       <i data-lucide="instagram" class="w-5 h-5"></i>
      </a>
-
-     <!-- TikTok -->
      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border border-[#FAF8F5]/20 bg-[#FAF8F5]/10 flex items-center justify-center text-[#FAF8F5] hover:bg-[#FAF1D6] hover:text-[#232220] hover:border-[#FAF1D6] transition-all" title="TikTok">
       <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.42V8.99a6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 10.8 4.49A6.31 6.31 0 0 0 15.82 15V8.2a8.28 8.28 0 0 0 4.77 1.51V6.3a4.85 4.85 0 0 1-1-.01z"/>
       </svg>
      </a>
     </div>
-
    </div>
 
    <div class="max-w-7xl mx-auto px-6 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-[#FAF8F5]/40 gap-4">
@@ -477,8 +446,11 @@
    </div>
   </footer>
 
-  <!-- Translation Dictionary & Dynamic Scripts -->
+  <!-- Translation Dictionary & WhatsApp Integration Script -->
   <script>
+    // ⚠️ ضع رقم الواتساب الخاص بكِ هنا بدلاً من الرقم المكتوب
+    const myWhatsAppNumber = "213500000000"; 
+
     let currentLang = 'en';
 
     const translations = {
@@ -560,10 +532,9 @@
         optTime3: "Weekend Special (15:00 PM – 18:00 PM)",
         lblTotal: "Total Fee",
         lblPriceText: "Price:",
-        btnSubmitForm: "Confirm Reservation",
+        btnSubmitForm: "Confirm Reservation via WhatsApp",
         ftSub: "Artistic & Crafts Workshops — Djendel & Khemis Miliana",
-        ftRights: "Italian Aesthetic & Pastel Elegance",
-        alertMsg: "Grazie! Your workshop seat has been reserved successfully."
+        ftRights: "Italian Aesthetic & Pastel Elegance"
       },
       ar: {
         navTitle: "أتيليه دآرتي",
@@ -643,10 +614,9 @@
         optTime3: "حصة نهاية الأسبوع (15:00 مساءً – 18:00 مساءً)",
         lblTotal: "المبلغ الإجمالي",
         lblPriceText: "السعر:",
-        btnSubmitForm: "تأكيد الحجز",
+        btnSubmitForm: "تأكيد الحجز عبر الواتساب",
         ftSub: "ورشات الفنون والحرف اليدوية — جندل وخميس مليانة",
-        ftRights: "أناقة باستيل بلمسة إيطالية",
-        alertMsg: "شكراً لكِ! تم حجز مقعدكِ في الورشة بنجاح."
+        ftRights: "أناقة باستيل بلمسة إيطالية"
       }
     };
 
@@ -679,14 +649,53 @@
       display.innerText = val + " " + currency;
     }
 
-    function handleBookingSubmit() {
-      alert(translations[currentLang].alertMsg);
+    // Function to build and send WhatsApp message
+    function sendToWhatsApp() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const location = document.getElementById('custLocation').value;
+      const category = document.getElementById('custCategory').value;
+      
+      const workshopSelect = document.getElementById('workshopSelect');
+      const workshopText = workshopSelect.options[workshopSelect.selectedIndex].text;
+      const priceText = document.getElementById('priceDisplay').innerText;
+      
+      const timeSelect = document.getElementById('custTime');
+      const timeText = timeSelect.options[timeSelect.selectedIndex].text;
+
+      let message = "";
+
+      if (currentLang === 'ar') {
+        message = `✨ *طلب حجز ورشة جديد - أتيليه دآرتي* ✨\n\n` +
+                  `👤 *الاسم:* ${name}\n` +
+                  `📞 *الهاتف:* ${phone}\n` +
+                  `📍 *المقر:* ${location}\n` +
+                  `🎨 *الفئة:* ${category}\n` +
+                  `🖌️ *الورشة:* ${workshopText}\n` +
+                  `⏰ *التوقيت:* ${timeText}\n` +
+                  `💰 *المبلغ:* ${priceText}\n\n` +
+                  `أود تأكيد الحجز من فضلكم!`;
+      } else {
+        message = `✨ *New Workshop Booking - Atelier d'Arte* ✨\n\n` +
+                  `👤 *Name:* ${name}\n` +
+                  `📞 *Phone:* ${phone}\n` +
+                  `📍 *Studio:* ${location}\n` +
+                  `🎨 *Category:* ${category}\n` +
+                  `🖌️ *Workshop:* ${workshopText}\n` +
+                  `⏰ *Time Slot:* ${timeText}\n` +
+                  `💰 *Total Fee:* ${priceText}\n\n` +
+                  `I would like to confirm my booking please!`;
+      }
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${encodedMessage}`;
+      
+      window.open(whatsappURL, '_blank');
     }
 
     document.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
 
-      // Scroll Reveal Observer
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -697,7 +706,6 @@
 
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-      // Dynamic Card Glow Light Following Cursor
       document.querySelectorAll('.pastel-card').forEach(card => {
         card.addEventListener('mousemove', e => {
           const rect = card.getBoundingClientRect();
